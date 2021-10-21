@@ -1,0 +1,969 @@
+<!doctype html>
+<html data-n-head-ssr lang="en-US" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en-US%22%7D%7D">
+  <head>
+    <title>Implementation - Flywire Travel Documentation</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="charset" charset="utf-8"><meta data-n-head="ssr" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="ssr" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="travel-documentation"><meta data-n-head="ssr" data-hid="theme-color" name="theme-color" content="#147BD1"><meta data-n-head="ssr" data-hid="i18n-og" property="og:locale" content="en_US"><meta data-n-head="ssr" data-hid="og:site_name" property="og:site_name" content="Flywire Travel Documentation"><meta data-n-head="ssr" data-hid="og:type" property="og:type" content="website"><meta data-n-head="ssr" data-hid="og:url" property="og:url" content="https://solutions.flywire.com"><meta data-n-head="ssr" data-hid="og:image" property="og:image" content="https://solutions.flywire.com/preview.png"><meta data-n-head="ssr" data-hid="twitter:card" name="twitter:card" content="summary_large_image"><meta data-n-head="ssr" data-hid="twitter:site" name="twitter:site" content="undefined"><meta data-n-head="ssr" data-hid="twitter:image" name="twitter:image" content="https://solutions.flywire.com/preview.png"><meta data-n-head="ssr" data-hid="twitter:image:alt" name="twitter:image:alt" content="Flywire Travel Documentation"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" data-hid="og:title" property="og:title" content="Implementation"><meta data-n-head="ssr" data-hid="og:description" property="og:description" content=""><meta data-n-head="ssr" data-hid="twitter:title" name="twitter:title" content="Implementation"><meta data-n-head="ssr" data-hid="twitter:description" name="twitter:description" content=""><link data-n-head="ssr" data-hid="gf-prefetch" rel="dns-prefetch" href="https://fonts.gstatic.com/"><link data-n-head="ssr" data-hid="gf-preconnect" rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""><link data-n-head="ssr" data-hid="gf-preload" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Mono"><link data-n-head="ssr" data-hid="shortcut-icon" rel="shortcut icon" href="/_nuxt/icons/icon_64x64.423412.png"><link data-n-head="ssr" data-hid="apple-touch-icon" rel="apple-touch-icon" href="/_nuxt/icons/icon_512x512.423412.png" sizes="512x512"><link data-n-head="ssr" rel="manifest" href="/_nuxt/manifest.8ac94d45.json" data-hid="manifest"><link data-n-head="ssr" data-hid="i18n-alt-en" rel="alternate" href="/en/checkout/implementation" hreflang="en"><link data-n-head="ssr" data-hid="i18n-alt-en-US" rel="alternate" href="/en/checkout/implementation" hreflang="en-US"><link data-n-head="ssr" data-hid="i18n-xd" rel="alternate" href="/en/checkout/implementation" hreflang="x-default"><link data-n-head="ssr" data-hid="i18n-can" rel="canonical" href="/en/checkout/implementation"><script data-n-head="ssr" data-hid="gf-script">!function(){var e=document.createElement("link");e.rel="stylesheet",e.href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Mono",document.querySelector("head").appendChild(e)}()</script><noscript data-n-head="ssr" data-hid="gf-noscript"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Mono"></noscript><link rel="preload" href="/_nuxt/455e051.js" as="script"><link rel="preload" href="/_nuxt/b53228f.js" as="script"><link rel="preload" href="/_nuxt/698c9d9.js" as="script"><link rel="preload" href="/_nuxt/1cd8660.js" as="script"><link rel="preload" href="/_nuxt/49e3250.js" as="script"><link rel="preload" href="/_nuxt/fd66c9d.js" as="script"><link rel="preload" href="/_nuxt/7fb4722.js" as="script"><link rel="preload" href="/_nuxt/06b1be8.js" as="script"><link rel="preload" href="/_nuxt/c427fc1.js" as="script"><link rel="preload" href="/_nuxt/6f197ac.js" as="script"><link rel="preload" href="/_nuxt/d84b617.js" as="script"><style data-vue-ssr-id="0211d3d2:0 06946318:0 0623093e:0 fa7ff0ca:0 4c5ed5c5:0 c6638966:0 3c959120:0">/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}details{display:block}summary{display:list-item}[hidden],template{display:none}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}button{background-color:transparent;background-image:none}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}fieldset,ol,ul{margin:0;padding:0}ol,ul{list-style:none}html{font-family:DM Sans,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}hr{border-top-width:1px}img{border-style:solid}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{color:#a0aec0}input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#a0aec0}input::placeholder,textarea::placeholder{color:#a0aec0}[role=button],button{cursor:pointer}table{border-collapse:collapse}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}button,input,optgroup,select,textarea{padding:0;line-height:inherit;color:inherit}code,kbd,pre,samp{font-family:DM Mono,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}.prose{color:#4a5568;max-width:65ch}.prose [class~=lead]{color:#4a5568;font-size:1.25em;line-height:1.6;margin-top:1.2em;margin-bottom:1.2em}.prose a{color:#147bd1;text-decoration:underline}.prose strong{color:#1a202c;font-weight:600}.prose ol{counter-reset:list-counter;margin-top:1.25em;margin-bottom:1.25em}.prose ol>li{position:relative;counter-increment:list-counter;padding-left:1.75em}.prose ol>li:before{content:counter(list-counter) ".";position:absolute;font-weight:400;color:#718096}.prose ul>li{position:relative;padding-left:1.75em}.prose ul>li:before{content:"";position:absolute;background-color:#cbd5e0;border-radius:50%;width:.375em;height:.375em;top:.6875em;left:.25em}.prose hr{border-color:#e2e8f0;border-top-width:1px;margin-top:3em;margin-bottom:3em}.prose blockquote{font-weight:400;font-style:normal;color:#718096;border-left-width:.25rem;border-left-color:#e2e8f0;quotes:"\201C""\201D""\2018""\2019";margin-top:1.6em;margin-bottom:1.6em;padding-left:1em}.prose h1{color:#1a202c;font-weight:800;font-size:2.25em;margin-top:0;margin-bottom:.8888889em;line-height:1.1111111}.prose h2{font-weight:700;font-size:1.5em;margin-top:2em;margin-bottom:1em;line-height:1.3333333}.prose h2,.prose h3{color:#1a202c;padding-bottom:.5rem;border-bottom-width:1px;border-bottom-color:#edf2f7}.prose h3{font-weight:600;font-size:1.25em;margin-top:1.6em;margin-bottom:.6em;line-height:1.6}.prose h4{color:#1a202c;font-weight:600;margin-top:1.5em;margin-bottom:.5em;line-height:1.5}.prose figure figcaption{color:#718096;font-size:.875em;line-height:1.4285714;margin-top:.8571429em}.prose code{color:#1a202c;font-weight:400;font-size:.875em;background-color:#f7fafc;padding:.25rem;border-width:1px;border-color:#edf2f7;border-radius:.25rem}.prose pre{color:#e2e8f0;background-color:#2d3748;overflow-x:auto;font-size:.875em;line-height:1.7142857;margin-top:1.7142857em;margin-bottom:1.7142857em;border-radius:.375rem;padding:.8571429em 1.1428571em}.prose pre code{background-color:transparent;border-width:0;border-radius:0;padding:0;font-weight:400;color:inherit;font-size:inherit;font-family:DM Mono;line-height:inherit}.prose pre code:after,.prose pre code:before{content:""}.prose table{width:100%;table-layout:auto;text-align:left;margin-top:2em;margin-bottom:2em;font-size:.875em;line-height:1.7142857}.prose thead{color:#1a202c;font-weight:600;border-bottom-width:1px;border-bottom-color:#cbd5e0}.prose thead th{vertical-align:bottom;padding-right:.5714286em;padding-bottom:.5714286em;padding-left:.5714286em}.prose tbody tr{border-bottom-width:1px;border-bottom-color:#e2e8f0}.prose tbody tr:last-child{border-bottom-width:0}.prose tbody td{vertical-align:top;padding:.5714286em}.prose{font-size:1rem;line-height:1.75}.prose p{margin-top:1.25em;margin-bottom:1.25em}.prose figure,.prose img,.prose video{margin-top:2em;margin-bottom:2em}.prose figure>*{margin-top:0;margin-bottom:0}.prose h2 code{font-size:.875em}.prose h3 code{font-size:.9em;font-weight:600}.prose ul{margin-top:1.25em;margin-bottom:1.25em}.prose li{margin-top:.5em;margin-bottom:.5em}.prose ol>li:before{left:0}.prose>ul>li p{margin-top:.75em;margin-bottom:.75em}.prose>ul>li>:first-child{margin-top:1.25em}.prose>ul>li>:last-child{margin-bottom:1.25em}.prose>ol>li>:first-child{margin-top:1.25em}.prose>ol>li>:last-child{margin-bottom:1.25em}.prose ol ol,.prose ol ul,.prose ul ol,.prose ul ul{margin-top:.75em;margin-bottom:.75em}.prose h2+*,.prose h3+*,.prose h4+*,.prose hr+*{margin-top:0}.prose thead th:first-child{padding-left:0}.prose thead th:last-child{padding-right:0}.prose tbody td:first-child{padding-left:0}.prose tbody td:last-child{padding-right:0}.prose>:first-child{margin-top:0}.prose>:last-child{margin-bottom:0}.prose a code{color:#147bd1}.dark-mode .dark\:prose-dark,.dark-mode .dark\:prose-dark [class~=lead]{color:#e2e8f0}.dark-mode .dark\:prose-dark a{color:#147bd1}.dark-mode .dark\:prose-dark strong{color:#f7fafc}.dark-mode .dark\:prose-dark ol>li:before{color:#cbd5e0}.dark-mode .dark\:prose-dark ul>li:before{background-color:#718096}.dark-mode .dark\:prose-dark hr{border-color:#4a5568}.dark-mode .dark\:prose-dark blockquote{color:#cbd5e0;border-left-color:#4a5568}.dark-mode .dark\:prose-dark h1{color:#f7fafc}.dark-mode .dark\:prose-dark h2,.dark-mode .dark\:prose-dark h3{color:#f7fafc;border-bottom-color:#2d3748}.dark-mode .dark\:prose-dark h4{color:#f7fafc}.dark-mode .dark\:prose-dark figure figcaption{color:#cbd5e0}.dark-mode .dark\:prose-dark code{color:#f7fafc;background-color:#2d3748;border-width:0}.dark-mode .dark\:prose-dark a code{color:#147bd1}.dark-mode .dark\:prose-dark thead{color:#f7fafc;border-bottom-color:#718096}.dark-mode .dark\:prose-dark tbody tr{border-bottom-color:#4a5568}:root{--color-transparent:transparent;--color-current:currentColor;--color-black:#000;--color-white:#fff;--color-gray-100:#f7fafc;--color-gray-200:#edf2f7;--color-gray-300:#e2e8f0;--color-gray-400:#cbd5e0;--color-gray-500:#a0aec0;--color-gray-600:#718096;--color-gray-700:#4a5568;--color-gray-800:#2d3748;--color-gray-900:#1a202c;--color-red-100:#fff5f5;--color-red-200:#fed7d7;--color-red-300:#feb2b2;--color-red-400:#fc8181;--color-red-500:#f56565;--color-red-600:#e53e3e;--color-red-700:#c53030;--color-red-800:#9b2c2c;--color-red-900:#742a2a;--color-orange-100:#fffaf0;--color-orange-200:#feebc8;--color-orange-300:#fbd38d;--color-orange-400:#f6ad55;--color-orange-500:#ed8936;--color-orange-600:#dd6b20;--color-orange-700:#c05621;--color-orange-800:#9c4221;--color-orange-900:#7b341e;--color-yellow-100:ivory;--color-yellow-200:#fefcbf;--color-yellow-300:#faf089;--color-yellow-400:#f6e05e;--color-yellow-500:#ecc94b;--color-yellow-600:#d69e2e;--color-yellow-700:#b7791f;--color-yellow-800:#975a16;--color-yellow-900:#744210;--color-green-100:#f0fff4;--color-green-200:#c6f6d5;--color-green-300:#9ae6b4;--color-green-400:#68d391;--color-green-500:#48bb78;--color-green-600:#38a169;--color-green-700:#2f855a;--color-green-800:#276749;--color-green-900:#22543d;--color-teal-100:#e6fffa;--color-teal-200:#b2f5ea;--color-teal-300:#81e6d9;--color-teal-400:#4fd1c5;--color-teal-500:#38b2ac;--color-teal-600:#319795;--color-teal-700:#2c7a7b;--color-teal-800:#285e61;--color-teal-900:#234e52;--color-blue-100:#ebf8ff;--color-blue-200:#bee3f8;--color-blue-300:#90cdf4;--color-blue-400:#63b3ed;--color-blue-500:#4299e1;--color-blue-600:#3182ce;--color-blue-700:#2b6cb0;--color-blue-800:#2c5282;--color-blue-900:#2a4365;--color-indigo-100:#ebf4ff;--color-indigo-200:#c3dafe;--color-indigo-300:#a3bffa;--color-indigo-400:#7f9cf5;--color-indigo-500:#667eea;--color-indigo-600:#5a67d8;--color-indigo-700:#4c51bf;--color-indigo-800:#434190;--color-indigo-900:#3c366b;--color-purple-100:#faf5ff;--color-purple-200:#e9d8fd;--color-purple-300:#d6bcfa;--color-purple-400:#b794f4;--color-purple-500:#9f7aea;--color-purple-600:#805ad5;--color-purple-700:#6b46c1;--color-purple-800:#553c9a;--color-purple-900:#44337a;--color-pink-100:#fff5f7;--color-pink-200:#fed7e2;--color-pink-300:#fbb6ce;--color-pink-400:#f687b3;--color-pink-500:#ed64a6;--color-pink-600:#d53f8c;--color-pink-700:#b83280;--color-pink-800:#97266d;--color-pink-900:#702459;--color-primary-50:#f3f8fd;--color-primary-100:#e8f2fa;--color-primary-200:#c4def4;--color-primary-300:#a1caed;--color-primary-400:#5ba3df;--color-primary-500:#147bd1;--color-primary-600:#126fbc;--color-primary-700:#0c4a7d;--color-primary-800:#09375e;--color-primary-900:#06253f}.space-x-2>:not(template)~:not(template){--space-x-reverse:0;margin-right:calc(.5rem*var(--space-x-reverse));margin-left:calc(.5rem*(1 - var(--space-x-reverse)))}.space-x-4>:not(template)~:not(template){--space-x-reverse:0;margin-right:calc(1rem*var(--space-x-reverse));margin-left:calc(1rem*(1 - var(--space-x-reverse)))}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.appearance-none{-webkit-appearance:none;-moz-appearance:none;appearance:none}.bg-black{--bg-opacity:1;background-color:#000;background-color:rgba(0,0,0,var(--bg-opacity))}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-200{--bg-opacity:1;background-color:#edf2f7;background-color:rgba(237,242,247,var(--bg-opacity))}.bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.bg-red-100{--bg-opacity:1;background-color:#fff5f5;background-color:rgba(255,245,245,var(--bg-opacity))}.bg-red-200{--bg-opacity:1;background-color:#fed7d7;background-color:rgba(254,215,215,var(--bg-opacity))}.bg-red-900{--bg-opacity:1;background-color:#742a2a;background-color:rgba(116,42,42,var(--bg-opacity))}.bg-orange-100{--bg-opacity:1;background-color:#fffaf0;background-color:rgba(255,250,240,var(--bg-opacity))}.bg-orange-200{--bg-opacity:1;background-color:#feebc8;background-color:rgba(254,235,200,var(--bg-opacity))}.bg-yellow-900{--bg-opacity:1;background-color:#744210;background-color:rgba(116,66,16,var(--bg-opacity))}.bg-green-100{--bg-opacity:1;background-color:#f0fff4;background-color:rgba(240,255,244,var(--bg-opacity))}.bg-green-200{--bg-opacity:1;background-color:#c6f6d5;background-color:rgba(198,246,213,var(--bg-opacity))}.bg-green-900{--bg-opacity:1;background-color:#22543d;background-color:rgba(34,84,61,var(--bg-opacity))}.bg-blue-100{--bg-opacity:1;background-color:#ebf8ff;background-color:rgba(235,248,255,var(--bg-opacity))}.bg-blue-200{--bg-opacity:1;background-color:#bee3f8;background-color:rgba(190,227,248,var(--bg-opacity))}.bg-blue-900{--bg-opacity:1;background-color:#2a4365;background-color:rgba(42,67,101,var(--bg-opacity))}.bg-primary-100{--bg-opacity:1;background-color:#e8f2fa;background-color:rgba(232,242,250,var(--bg-opacity))}.bg-primary-500{--bg-opacity:1;background-color:#147bd1;background-color:rgba(20,123,209,var(--bg-opacity))}.focus\:bg-white:focus{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.dark-mode .dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark-mode .dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark-mode .dark\:bg-primary-900{--bg-opacity:1;background-color:#06253f;background-color:rgba(6,37,63,var(--bg-opacity))}.dark-mode .dark-focus\:bg-gray-900:focus{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.border-transparent{border-color:transparent}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-gray-300{--border-opacity:1;border-color:#e2e8f0;border-color:rgba(226,232,240,var(--border-opacity))}.border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.border-red-500{--border-opacity:1;border-color:#f56565;border-color:rgba(245,101,101,var(--border-opacity))}.border-green-500{--border-opacity:1;border-color:#48bb78;border-color:rgba(72,187,120,var(--border-opacity))}.focus\:border-gray-300:focus{--border-opacity:1;border-color:#e2e8f0;border-color:rgba(226,232,240,var(--border-opacity))}.dark-mode .dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark-mode .dark\:border-gray-800{--border-opacity:1;border-color:#2d3748;border-color:rgba(45,55,72,var(--border-opacity))}.dark-mode .dark-focus\:border-gray-700:focus{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.rounded{border-radius:.25rem}.rounded-md{border-radius:.375rem}.rounded-full{border-radius:9999px}.rounded-t-none{border-top-left-radius:0;border-top-right-radius:0}.rounded-b-none{border-bottom-right-radius:0;border-bottom-left-radius:0}.rounded-b{border-bottom-right-radius:.25rem;border-bottom-left-radius:.25rem}.rounded-t-md{border-top-left-radius:.375rem;border-top-right-radius:.375rem}.border-dashed{border-style:dashed}.border-0{border-width:0}.border{border-width:1px}.border-b-2{border-bottom-width:2px}.border-t-4{border-top-width:4px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-b{border-bottom-width:1px}.first\:border-t-0:first-child{border-top-width:0}.block{display:block}.inline-block{display:inline-block}.inline{display:inline}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.flex-wrap-reverse{flex-wrap:wrap-reverse}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-start{justify-content:flex-start}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.flex-1{flex:1 1 0%}.flex-grow{flex-grow:1}.flex-shrink-0{flex-shrink:0}.float-right{float:right}.font-mono{font-family:DM Mono,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}.font-normal{font-weight:400}.font-medium{font-weight:500}.font-semibold{font-weight:600}.font-bold{font-weight:700}.font-black{font-weight:900}.h-2{height:.5rem}.h-3{height:.75rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-16{height:4rem}.h-full{height:100%}.h-screen{height:100vh}.text-xs{font-size:.75rem;line-height:1rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.leading-5{line-height:1.25rem}.leading-7{line-height:1.75rem}.leading-none{line-height:1}.leading-tight{line-height:1.25}.leading-normal{line-height:1.5}.m-0{margin:0}.mx-1{margin-left:.25rem;margin-right:.25rem}.mx-auto{margin-left:auto;margin-right:auto}.-mx-3{margin-left:-.75rem;margin-right:-.75rem}.ml-0{margin-left:0}.mr-1{margin-right:.25rem}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mb-2{margin-bottom:.5rem}.ml-2{margin-left:.5rem}.mt-3{margin-top:.75rem}.mr-3{margin-right:.75rem}.mb-3{margin-bottom:.75rem}.ml-3{margin-left:.75rem}.mt-4{margin-top:1rem}.mr-4{margin-right:1rem}.mb-4{margin-bottom:1rem}.ml-4{margin-left:1rem}.ml-5{margin-left:1.25rem}.mb-6{margin-bottom:1.5rem}.mt-8{margin-top:2rem}.mb-8{margin-bottom:2rem}.mb-12{margin-bottom:3rem}.mt-16{margin-top:4rem}.mt-px{margin-top:1px}.-ml-1{margin-left:-.25rem}.-mr-2{margin-right:-.5rem}.-mt-4{margin-top:-1rem}.max-w-none{max-width:none}.max-w-lg{max-width:32rem}.max-w-full{max-width:100%}.opacity-0{opacity:0}.opacity-25{opacity:.25}.opacity-75{opacity:.75}.opacity-100{opacity:1}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.overflow-y-hidden{overflow-y:hidden}.p-2{padding:.5rem}.p-4{padding:1rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.px-3{padding-left:.75rem;padding-right:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-4{padding-left:1rem;padding-right:1rem}.pb-2{padding-bottom:.5rem}.pr-3{padding-right:.75rem}.pl-3{padding-left:.75rem}.pt-4{padding-top:1rem}.pr-4{padding-right:1rem}.pb-4{padding-bottom:1rem}.pl-4{padding-left:1rem}.pl-10{padding-left:2.5rem}.pt-16{padding-top:4rem}.hover\:pl-1:hover{padding-left:.25rem}.placeholder-gray-500::-moz-placeholder{--placeholder-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--placeholder-opacity))}.placeholder-gray-500:-ms-input-placeholder{--placeholder-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--placeholder-opacity))}.placeholder-gray-500::placeholder{--placeholder-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--placeholder-opacity))}.pointer-events-none{pointer-events:none}.static{position:static}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{right:0;left:0}.inset-0,.inset-y-0{top:0;bottom:0}.top-0{top:0}.right-0{right:0}.bottom-0{bottom:0}.left-0{left:0}.shadow-xs{box-shadow:0 0 0 1px rgba(0,0,0,.05)}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.shadow-md{box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)}.shadow-lg{box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)}.shadow-none{box-shadow:none}.fill-current{fill:currentColor}.text-left{text-align:left}.text-center{text-align:center}.text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-red-500{--text-opacity:1;color:#f56565;color:rgba(245,101,101,var(--text-opacity))}.text-red-900{--text-opacity:1;color:#742a2a;color:rgba(116,42,42,var(--text-opacity))}.text-green-500{--text-opacity:1;color:#48bb78;color:rgba(72,187,120,var(--text-opacity))}.text-green-900{--text-opacity:1;color:#22543d;color:rgba(34,84,61,var(--text-opacity))}.hover\:text-primary-500:hover,.text-primary-500{--text-opacity:1;color:#147bd1;color:rgba(20,123,209,var(--text-opacity))}.dark-mode .dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark-mode .dark\:text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.dark-mode .dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark-mode .dark-hover\:text-primary-500:hover{--text-opacity:1;color:#147bd1;color:rgba(20,123,209,var(--text-opacity))}.dark-mode .dark-focus\:text-white:focus{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.uppercase{text-transform:uppercase}.hover\:underline:hover{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.tracking-tight{letter-spacing:-.025em}.tracking-wide{letter-spacing:.025em}.tracking-wider{letter-spacing:.05em}.truncate,.whitespace-no-wrap{white-space:nowrap}.truncate{overflow:hidden;text-overflow:ellipsis}.w-2{width:.5rem}.w-3{width:.75rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-auto{width:auto}.w-4\/6{width:66.666667%}.w-6\/12{width:50%}.w-full{width:100%}.z-10{z-index:10}.z-20{z-index:20}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.gap-2{grid-gap:.5rem;gap:.5rem}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.transform{--transform-translate-x:0;--transform-translate-y:0;--transform-rotate:0;--transform-skew-x:0;--transform-skew-y:0;--transform-scale-x:1;--transform-scale-y:1;transform:translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))}.origin-top-right{transform-origin:top right}.scale-95{--transform-scale-x:.95;--transform-scale-y:.95}.scale-100{--transform-scale-x:1;--transform-scale-y:1}.transition{transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform}.transition-padding{transition-property:padding}.ease-in{transition-timing-function:cubic-bezier(.4,0,1,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-75{transition-duration:75ms}.duration-100{transition-duration:.1s}.duration-150{transition-duration:.15s}.duration-300{transition-duration:.3s}@-webkit-keyframes spin{to{transform:rotate(1turn)}}@keyframes spin{to{transform:rotate(1turn)}}@-webkit-keyframes ping{75%,to{transform:scale(2);opacity:0}}@keyframes ping{75%,to{transform:scale(2);opacity:0}}@-webkit-keyframes pulse{50%{opacity:.5}}@keyframes pulse{50%{opacity:.5}}@-webkit-keyframes bounce{0%,to{transform:translateY(-25%);-webkit-animation-timing-function:cubic-bezier(.8,0,1,1);animation-timing-function:cubic-bezier(.8,0,1,1)}50%{transform:none;-webkit-animation-timing-function:cubic-bezier(0,0,.2,1);animation-timing-function:cubic-bezier(0,0,.2,1)}}@keyframes bounce{0%,to{transform:translateY(-25%);-webkit-animation-timing-function:cubic-bezier(.8,0,1,1);animation-timing-function:cubic-bezier(.8,0,1,1)}50%{transform:none;-webkit-animation-timing-function:cubic-bezier(0,0,.2,1);animation-timing-function:cubic-bezier(0,0,.2,1)}}.animate-spin{-webkit-animation:spin 1s linear infinite;animation:spin 1s linear infinite}.animate-pulse{-webkit-animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}@media (min-width:640px){.sm\:flex-row{flex-direction:row}}@media (min-width:768px){.md\:mb-0{margin-bottom:0}.md\:w-1\/2{width:50%}}@media (min-width:1024px){.dark-mode .lg\:dark\:bg-transparent,.lg\:bg-transparent{background-color:transparent}.lg\:border-t-0{border-top-width:0}.lg\:border-r{border-right-width:1px}.lg\:border-l{border-left-width:1px}.lg\:block{display:block}.lg\:hidden{display:none}.lg\:h-auto{height:auto}.lg\:text-xs{font-size:.75rem;line-height:1rem}.lg\:-mx-8{margin-left:-2rem;margin-right:-2rem}.lg\:mt-0{margin-top:0}.lg\:mb-0{margin-bottom:0}.lg\:mb-2{margin-bottom:.5rem}.lg\:max-h-\(screen-16\){max-height:calc(100vh - 4rem)}.lg\:overflow-y-auto{overflow-y:auto}.lg\:py-8{padding-top:2rem;padding-bottom:2rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:pl-0{padding-left:0}.lg\:pr-2{padding-right:.5rem}.lg\:pb-4{padding-bottom:1rem}.lg\:pt-8{padding-top:2rem}.lg\:pr-8{padding-right:2rem}.lg\:pl-8{padding-left:2rem}.lg\:relative{position:relative}.lg\:sticky{position:-webkit-sticky;position:sticky}.lg\:top-16{top:4rem}.lg\:w-1\/4{width:25%}.lg\:w-3\/4{width:75%}.lg\:w-1\/5{width:20%}.lg\:w-4\/5{width:80%}.lg\:w-full{width:100%}}.dark-mode .light-img{display:none}.dark-mode .dark-img{display:block}.dark-img{display:none}.light-img{display:block}.nuxt-content{word-wrap:break-word}.nuxt-content h2:before,.nuxt-content h3:before{display:block;content:" ";margin-top:-85px;height:85px;visibility:hidden;pointer-events:none}.nuxt-content h2>a,.nuxt-content h3>a{margin-left:1.25rem}.nuxt-content h2>a:before,.nuxt-content h3>a:before{content:"#";--text-opacity:1;color:#147bd1;color:rgba(20,123,209,var(--text-opacity));font-weight:400;font-size:1.25rem;line-height:1.75rem;line-height:2rem;margin-left:-1.25rem;padding-right:.5rem;position:absolute;opacity:1}@media (min-width:1024px){.nuxt-content h2>a,.nuxt-content h3>a{margin-left:0}.nuxt-content h2>a:before,.nuxt-content h3>a:before{opacity:0}}.nuxt-content h2:hover>a:before,.nuxt-content h3:hover>a:before{opacity:1}.nuxt-content .nuxt-content-highlight{position:relative}.nuxt-content .nuxt-content-highlight>.filename{position:absolute;right:0;top:0;--text-opacity:1;color:#f7fafc;color:rgba(247,250,252,var(--text-opacity));z-index:10;font-family:DM Mono,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:.875rem;line-height:1.25rem;letter-spacing:-.025em;line-height:1;margin-right:1rem;margin-top:.75rem}.nuxt-content .nuxt-content-highlight>.filename+pre[class*=language-]{padding-top:2rem}.nuxt-content .nuxt-content-highlight>.copy{display:none;position:absolute;right:0;bottom:0;line-height:1;box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);padding:.5rem;--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity));--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity));font-size:.875rem;line-height:1.25rem;text-transform:uppercase;border-radius:.375rem;border-width:1px;--border-opacity:1;border-color:#fff;border-color:rgba(255,255,255,var(--border-opacity));font-weight:600;margin-right:.75rem;margin-bottom:.75rem}.nuxt-content .nuxt-content-highlight>.copy:hover{--bg-opacity:1;background-color:#4a5568;background-color:rgba(74,85,104,var(--bg-opacity))}.nuxt-content .nuxt-content-highlight>.copy:focus{outline:2px solid transparent;outline-offset:2px;--bg-opacity:1;background-color:#718096;background-color:rgba(113,128,150,var(--bg-opacity))}.nuxt-content .nuxt-content-highlight:hover>.copy{display:block}.nuxt-content pre[class*=language-]{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity));position:static}code[class*=language-],pre[class*=language-]{text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;color:#c3cee3;background:#263238;font-family:Roboto Mono,monospace;font-size:1em;line-height:1.5em;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{background:#363636}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#363636}:not(pre)>code[class*=language-]{white-space:normal;border-radius:.2em;padding:.1em}pre[class*=language-]{overflow:auto;position:relative;margin:.5em 0;padding:1.25em 1em}.language-css>code,.language-sass>code,.language-scss>code{color:#fd9170}[class*=language-] .namespace{opacity:.7}.token.atrule{color:#c792ea}.token.attr-name{color:#ffcb6b}.token.attr-value,.token.attribute{color:#c3e88d}.token.boolean{color:#c792ea}.token.builtin{color:#ffcb6b}.token.cdata,.token.char{color:#80cbc4}.token.class{color:#ffcb6b}.token.class-name,.token.color{color:#f2ff00}.token.comment{color:#546e7a}.token.constant{color:#c792ea}.token.deleted{color:#f07178}.token.doctype{color:#546e7a}.token.entity{color:#f07178}.token.function{color:#c792ea}.token.hexcode{color:#f2ff00}.token.id,.token.important{color:#c792ea;font-weight:700}.token.inserted{color:#80cbc4}.token.keyword{color:#c792ea;font-style:italic}.token.number{color:#fd9170}.token.operator{color:#89ddff}.token.prolog{color:#546e7a}.token.property{color:#80cbc4}.token.pseudo-class,.token.pseudo-element{color:#c3e88d}.token.punctuation{color:#89ddff}.token.regex{color:#f2ff00}.token.selector{color:#f07178}.token.string{color:#c3e88d}.token.symbol{color:#c792ea}.token.tag,.token.unit{color:#f07178}.token.url{color:#fd9170}.token.variable{color:#f07178}.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#67c59b;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}.alert p{margin:0!important}.alert a{--text-opacity:1!important;color:#4a5568!important;color:rgba(74,85,104,var(--text-opacity))!important}.dark-mode .alert a{--text-opacity:1!important;color:#e2e8f0!important;color:rgba(226,232,240,var(--text-opacity))!important}.alert strong{color:currentColor}.alert-content pre code{background-color:inherit!important}.alert-info{--bg-opacity:1;background-color:#ebf8ff;background-color:rgba(235,248,255,var(--bg-opacity));--border-opacity:1;border-color:#63b3ed;border-color:rgba(99,179,237,var(--border-opacity))}.alert-info code{--bg-opacity:1;background-color:#bee3f8;background-color:rgba(190,227,248,var(--bg-opacity));box-shadow:none;border-width:0;color:currentColor}.alert-info .alert-icon{--text-opacity:1;color:#63b3ed;color:rgba(99,179,237,var(--text-opacity))}.alert-info .alert-content{--text-opacity:1;color:#2b6cb0;color:rgba(43,108,176,var(--text-opacity))}.dark-mode .alert-info{--bg-opacity:1;background-color:#2a4365;background-color:rgba(42,67,101,var(--bg-opacity));--border-opacity:1;border-color:#2b6cb0;border-color:rgba(43,108,176,var(--border-opacity))}.dark-mode .alert-info code{--bg-opacity:1;background-color:#2c5282;background-color:rgba(44,82,130,var(--bg-opacity))}.dark-mode .alert-info .alert-content{--text-opacity:1;color:#90cdf4;color:rgba(144,205,244,var(--text-opacity))}.alert-success{--bg-opacity:1;background-color:#f0fff4;background-color:rgba(240,255,244,var(--bg-opacity));--border-opacity:1;border-color:#68d391;border-color:rgba(104,211,145,var(--border-opacity))}.alert-success code{--bg-opacity:1;background-color:#c6f6d5;background-color:rgba(198,246,213,var(--bg-opacity));box-shadow:none;border-width:0;color:currentColor}.alert-success .alert-icon{--text-opacity:1;color:#68d391;color:rgba(104,211,145,var(--text-opacity))}.alert-success .alert-content{--text-opacity:1;color:#2f855a;color:rgba(47,133,90,var(--text-opacity))}.dark-mode .alert-success{--bg-opacity:1;background-color:#22543d;background-color:rgba(34,84,61,var(--bg-opacity));--border-opacity:1;border-color:#2f855a;border-color:rgba(47,133,90,var(--border-opacity))}.dark-mode .alert-success code{--bg-opacity:1;background-color:#276749;background-color:rgba(39,103,73,var(--bg-opacity))}.dark-mode .alert-success .alert-content{--text-opacity:1;color:#9ae6b4;color:rgba(154,230,180,var(--text-opacity))}.alert-warning{--bg-opacity:1;background-color:#fffaf0;background-color:rgba(255,250,240,var(--bg-opacity));--border-opacity:1;border-color:#f6ad55;border-color:rgba(246,173,85,var(--border-opacity))}.alert-warning code{--bg-opacity:1;background-color:#feebc8;background-color:rgba(254,235,200,var(--bg-opacity));box-shadow:none;border-width:0;color:currentColor}.alert-warning .alert-icon{--text-opacity:1;color:#f6ad55;color:rgba(246,173,85,var(--text-opacity))}.alert-warning .alert-content{--text-opacity:1;color:#c05621;color:rgba(192,86,33,var(--text-opacity))}.dark-mode .alert-warning{--bg-opacity:1;background-color:#744210;background-color:rgba(116,66,16,var(--bg-opacity));--border-opacity:1;border-color:#b7791f;border-color:rgba(183,121,31,var(--border-opacity))}.dark-mode .alert-warning code{--bg-opacity:1;background-color:#975a16;background-color:rgba(151,90,22,var(--bg-opacity))}.dark-mode .alert-warning .alert-content{--text-opacity:1;color:#fbd38d;color:rgba(251,211,141,var(--text-opacity))}.alert-danger{--bg-opacity:1;background-color:#fff5f5;background-color:rgba(255,245,245,var(--bg-opacity));--border-opacity:1;border-color:#fc8181;border-color:rgba(252,129,129,var(--border-opacity))}.alert-danger code{--bg-opacity:1;background-color:#fed7d7;background-color:rgba(254,215,215,var(--bg-opacity));box-shadow:none;border-width:0;color:currentColor}.alert-danger .alert-icon{--text-opacity:1;color:#fc8181;color:rgba(252,129,129,var(--text-opacity))}.alert-danger .alert-content{--text-opacity:1;color:#c53030;color:rgba(197,48,48,var(--text-opacity))}.dark-mode .alert-danger{--bg-opacity:1;background-color:#742a2a;background-color:rgba(116,42,42,var(--bg-opacity));--border-opacity:1;border-color:#c53030;border-color:rgba(197,48,48,var(--border-opacity))}.dark-mode .alert-danger code{--bg-opacity:1;background-color:#9b2c2c;background-color:rgba(155,44,44,var(--bg-opacity))}.dark-mode .alert-danger .alert-content{--text-opacity:1;color:#feb2b2;color:rgba(254,178,178,var(--text-opacity))}button[data-v-67ddf998]{outline:0}.highlight-underline[data-v-67ddf998]{--bg-opacity:1;background-color:#147bd1;background-color:rgba(20,123,209,var(--bg-opacity));position:absolute;bottom:-2px;height:2px;transition:left .15s,width .15s}.code-group[data-v-67ddf998] pre[class*=language-]{border-top-left-radius:0;border-top-right-radius:0;margin-top:0}.code-block[data-v-15fab0cb]{display:none}.code-block.active[data-v-15fab0cb]{display:block}</style><link rel="preload" href="/_nuxt/static/1634816039/en/checkout/implementation/state.js" as="script"><link rel="preload" href="/_nuxt/static/1634816039/en/checkout/implementation/payload.js" as="script"><link rel="preload" href="/_nuxt/static/1634816039/manifest.js" as="script">
+  </head>
+  <body class="antialiased text-gray-700 leading-normal bg-white dark:bg-gray-900 dark:text-gray-300" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22antialiased%20text-gray-700%20leading-normal%20bg-white%20dark:bg-gray-900%20dark:text-gray-300%22%5D%7D%7D">
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function(){"use strict";var t=window,e=document,s=e.documentElement,a=["dark","light"],o=window.localStorage.getItem("nuxt-color-mode")||"system",c="system"===o?n():o,e=e.body.getAttribute("data-color-mode-forced");function r(e){e+="-mode";s.classList?s.classList.add(e):s.className+=" "+e}function l(e){return t.matchMedia("(prefers-color-scheme"+e+")")}function n(){if(t.matchMedia&&"not all"!==l("").media)for(var e of a)if(l(":"+e).matches)return e;return"light"}r(c=e?e:c),t.__NUXT_COLOR_MODE__={preference:o,value:c,getColorScheme:n,addClass:r,removeClass:function(e){e+="-mode";s.classList?s.classList.remove(e):s.className=s.className.replace(new RegExp(e,"g"),"")}}}()</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="pt-16"><nav class="fixed top-0 z-40 w-full border-b dark:border-gray-800 bg-white dark:bg-gray-900"><div class="container mx-auto flex-1 px-4 lg:px-8"><div class="flex items-center justify-between h-16"><div class="lg:w-1/5 flex items-center pr-4"><a href="/en" aria-label="Flywire Travel Documentation Logo" class="flex-shrink-0 flex-1 font-bold text-xl nuxt-link-active"><!----> <img src="/logo-light.svg" alt="Flywire Travel Documentation" class="h-8 max-w-full light-img"> <img src="/logo-dark.svg" alt="Flywire Travel Documentation" class="h-8 max-w-full dark-img"></a></div> <div class="flex-1 flex justify-start w-4/6"><div class="w-full relative flex flex-col justify-between hidden lg:block"><div class="w-full relative"><label for="search" class="sr-only">Search</label> <div class="relative"><div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-gray-500"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></div> <input id="search" placeholder='Search the docs (Press "/" to focus)' type="search" autocomplete="off" class="block w-full pl-10 pr-3 py-2 truncate leading-5 placeholder-gray-500 border border-transparent text-gray-700 dark:text-white dark-focus:text-white focus:border-gray-300 dark-focus:border-gray-700 rounded-md focus:outline-none focus:bg-white dark-focus:bg-gray-900 bg-gray-200 dark:bg-gray-800"></div></div> <ul class="z-10 absolute w-full flex-1 top-0 bg-white dark:bg-gray-900 rounded-md border border-gray-300 dark:border-gray-700 overflow-hidden" style="margin-top:37px;display:none"><!----> </ul></div></div> <div class="lg:w-1/5 flex items-center pl-4 lg:pl-8 justify-end"><!----> <div class="flex items-center"><!----> <!----> <button aria-label="Menu" class="lg:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 focus:outline-none -mr-2"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div></div></div></div></nav> <main class="container mx-auto px-4 lg:px-8"><div class="flex flex-wrap relative"><aside class="w-full lg:w-1/5 lg:block fixed lg:relative inset-0 mt-16 lg:mt-0 z-30 bg-white dark:bg-gray-900 lg:bg-transparent lg:dark:bg-transparent hidden"><div class="lg:sticky lg:top-16 overflow-y-auto h-full lg:h-auto lg:max-h-(screen-16)"><ul class="p-4 lg:py-8 lg:pl-0 lg:pr-8"><li class="mb-4 lg:hidden"><div class="w-full relative flex flex-col justify-between"><div class="w-full relative"><label for="search" class="sr-only">Search</label> <div class="relative"><div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-gray-500"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></div> <input id="search" placeholder='Search the docs (Press "/" to focus)' type="search" autocomplete="off" class="block w-full pl-10 pr-3 py-2 truncate leading-5 placeholder-gray-500 border border-transparent text-gray-700 dark:text-white dark-focus:text-white focus:border-gray-300 dark-focus:border-gray-700 rounded-md focus:outline-none focus:bg-white dark-focus:bg-gray-900 bg-gray-200 dark:bg-gray-800"></div></div> <ul class="z-10 absolute w-full flex-1 top-0 bg-white dark:bg-gray-900 rounded-md border border-gray-300 dark:border-gray-700 overflow-hidden" style="margin-top:37px;display:none"><!----> </ul></div></li> <li class="mb-4"><!----> <ul><li class="text-gray-700 dark:text-gray-300"><a href="/en" class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between nuxt-link-active">
+              Introduction
+              <!----></a></li><li class="text-gray-700 dark:text-gray-300"><a href="/en/dashboard" class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between">
+              Dashboard
+              <!----></a></li><li class="text-gray-700 dark:text-gray-300"><a href="/en/portal-configuration" class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between">
+              Your Portal Configuration
+              <!----></a></li></ul></li><li class="mb-4"><p class="mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm lg:text-xs">Checkout</p> <ul><li class="text-gray-700 dark:text-gray-300"><a href="/en/checkout/implementation" aria-current="page" class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between text-primary-500 bg-primary-100 hover:text-primary-500 dark:bg-primary-900 nuxt-link-active">
+              Implementation
+              <!----></a></li><li class="text-gray-700 dark:text-gray-300"><a href="/en/checkout/repeat-payments" class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between">
+              Repeat Payments
+              <!----></a></li></ul></li><li class="mb-4"><p class="mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm lg:text-xs">Payment Links</p> <ul><li class="text-gray-700 dark:text-gray-300"><a href="/en/payment-link/how-to-guide" class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between">
+              How To Guide
+              <!----></a></li><li class="text-gray-700 dark:text-gray-300"><a href="/en/payment-link/link-generator" class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between">
+              Link Generator
+              <!----></a></li></ul></li><li class="mb-4 lg:mb-0"><p class="mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm lg:text-xs">Webhooks</p> <ul><li class="text-gray-700 dark:text-gray-300"><a href="/en/webhooks/notifications-v1" class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between">
+              v1. Notifications
+              <!----></a></li><li class="text-gray-700 dark:text-gray-300"><a href="/en/webhooks/notifications-v2" class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between">
+              v2. Notifications
+              <!----></a></li></ul></li> <li class="lg:hidden space-x-2"><p class="mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm lg:text-xs">More</p> <div class="flex items-center space-x-4"><!----> <!----> <!----> <span class="inline-flex"><button aria-label="Color Mode" class="rounded-md hover:text-primary-500 focus:outline-none transition ease-in-out duration-150"><!----></button></span></div></li></ul></div></aside> <div class="flex flex-wrap-reverse w-full lg:w-4/5"><div class="w-full py-4 lg:pt-8 lg:pb-4 dark:border-gray-800 lg:w-3/4 lg:border-l lg:border-r"><article class="prose dark:prose-dark max-w-none lg:px-8"><h1 class="flex items-center justify-between">
+        Implementation
+        <!----></h1> <!----> <div class="nuxt-content"><h2 id="overview"><a href="#overview" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Overview</h2>
+<p>If you want to maintain complete control of the customer data capture within your site then the Flywire checkout
+offers the most streamlined payment experience available. Customers remain on your site and the checkout modal
+pop-up allows the payer to chose their payment method and complete the payment in as little as one step.</p>
+<p>On completion of a payment the customer is returned back to your site to a specified redirection URL or through a
+callback function. In addition, real-time notifications can be enabled to allow you update your back-office systems
+with payment status information.</p>
+<p>There are several configuration options available when using the Flywire checkout. Please take a look at
+the following sample page and configuration options to decide which is most appropriate for your use case.
+All the available configuration options are explained <a href="/en/checkout/implementation#configuration-parameters">here</a>.</p>
+<h2 id="sample-page"><a href="#sample-page" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Sample Page</h2>
+<p>This is a simplified sample page demonstrating how to initiate a payment through Flywire.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- Include the flywire.js script --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://checkout.flywire.com/flywire-payment.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- Add a button element --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">pay</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
+      Make Payment
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+      <span class="token comment">// Add an event handler</span>
+      <span class="token keyword">function</span> <span class="token function">pay</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">var</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+          <span class="token comment">// See sample configuration options</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">var</span> modal <span class="token operator">=</span> <span class="token dom variable">window</span><span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">FlywirePayment</span></span><span class="token punctuation">.</span><span class="token method function property-access">initiate</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        modal<span class="token punctuation">.</span><span class="token method function property-access">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre></div>
+<h3 id="script"><a href="#script" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Script</h3>
+<p>Add the flywire-payment script to your page</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-html"><code> <span class="token comment">&lt;!-- Include the flywire.js script --></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://checkout.flywire.com/flywire-payment.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre></div>
+<h3 id="event-handler"><a href="#event-handler" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Event Handler</h3>
+<p>Add a button (or other element or event) to trigger the Flywire checkout</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-html"><code>    <span class="token comment">&lt;!-- Add a button element --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">pay</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
+      Make Payment
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span>
+      // Add an event handler
+      function pay() {
+</code></pre></div>
+<h3 id="configuration"><a href="#configuration" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Configuration</h3>
+<p>Set your portal specific payment configuration options. Please refer to the samples <a href="#sample-configurations">here</a>.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code>        <span class="token keyword">var</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+          <span class="token comment">// See sample configuration options</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div>
+<h3 id="render"><a href="#render" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Render</h3>
+<p>Finally, initiate the payment with the specified configuration and render the checkout.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code>        <span class="token keyword">var</span> modal <span class="token operator">=</span> <span class="token dom variable">window</span><span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">FlywirePayment</span></span><span class="token punctuation">.</span><span class="token method function property-access">initiate</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        modal<span class="token punctuation">.</span><span class="token method function property-access">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+ <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+</code></pre></div>
+<h2 id="sample-configurations"><a href="#sample-configurations" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Sample Configurations</h2>
+<h3 id="minimum"><a href="#minimum" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Minimum</h3>
+<p>The following parameters must be specified as a minimum to successfully render the checkout.</p>
+<p>The customer will be prompted to enter all payer and custom field information.</p>
+<p>We recommended that you always implement an <code>onInvalidInput</code> handler to report any error messages to your customers.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token keyword">var</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Set the target environment (demo, prod)</span>
+  env<span class="token operator">:</span> <span class="token string">"demo"</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Set your unique code (may differ between demo and prod)</span>
+  recipientCode<span class="token operator">:</span> <span class="token string">"Your Portal Code"</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Set the value of the payment to be processed</span>
+  amount<span class="token operator">:</span> <span class="token number">1234.56</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Recommended (not required) validation error handler</span>
+  <span class="token function-variable function">onInvalidInput</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">errors</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    errors<span class="token punctuation">.</span><span class="token method function property-access">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span><span class="token property-access">msg</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Display payer and custom field input boxes</span>
+  requestPayerInfo<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  requestRecipientInfo<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Set the return URL where payers are redirected to on completion</span>
+  returnUrl<span class="token operator">:</span> <span class="token string">"https://httpbin.org/get"</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div>
+<h3 id="partial-payer-info"><a href="#partial-payer-info" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Partial Payer Info</h3>
+<p>This sample configuration will render a checkout with information input boxes partially populated by the values in the configuration object.</p>
+<p>If complete information is provided for either the payer information or for custom fields then thoses pages will be skipped by setting the
+<code>skipCompletedSteps</code> to <code>true</code>.</p>
+<p>Once the payment is complete the <code>onCompleteCallback</code> handler will be called and the checkout closed rather than the window being redirected.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token keyword">var</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  env<span class="token operator">:</span> <span class="token string">"demo"</span><span class="token punctuation">,</span>
+  recipientCode<span class="token operator">:</span> <span class="token string">"Your Portal Code"</span><span class="token punctuation">,</span>
+  amount<span class="token operator">:</span> <span class="token number">1234.56</span><span class="token punctuation">,</span>
+
+  <span class="token function-variable function">onInvalidInput</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">errors</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    errors<span class="token punctuation">.</span><span class="token method function property-access">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span><span class="token property-access">msg</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Display the payer and custom information input boxes</span>
+  <span class="token comment">// skipping either page if all the information has been passed in.</span>
+  <span class="token comment">// NB. You can see this behaviour by completing the address, city and</span>
+  <span class="token comment">// country parameters in the next block.</span>
+  requestPayerInfo<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  requestRecipientInfo<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  skipCompletedSteps<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Pass in partial payer information (missing parameters can</span>
+  <span class="token comment">// alternatively be omitted rather than included with empty or</span>
+  <span class="token comment">// null values)</span>
+  firstName<span class="token operator">:</span> <span class="token string">"John"</span><span class="token punctuation">,</span>
+  lastName<span class="token operator">:</span> <span class="token string">"Doe"</span><span class="token punctuation">,</span>
+  email<span class="token operator">:</span> <span class="token string">"john.doe@flywire.com"</span><span class="token punctuation">,</span>
+  phone<span class="token operator">:</span> <span class="token string">"+44 1234 567 890"</span><span class="token punctuation">,</span>
+  address<span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+  city<span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+  country<span class="token operator">:</span> <span class="token keyword null nil">null</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Pass in partial custom field information (missing parameters can</span>
+  <span class="token comment">// alternatively be omitted rather than included with empty or null</span>
+  <span class="token comment">// values)</span>
+  recipientFields<span class="token operator">:</span> <span class="token punctuation">{</span>
+    booking_reference<span class="token operator">:</span> <span class="token string">"REF1234"</span><span class="token punctuation">,</span>
+    additional_information<span class="token operator">:</span> <span class="token keyword null nil">null</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// The callback function that is called once the payment is complete</span>
+  <span class="token function-variable function">onCompleteCallback</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div>
+<h3 id="complete-payer-info"><a href="#complete-payer-info" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Complete Payer Info</h3>
+<p>This sample configuration will render a checkout without showing any input boxes by setting both the <code>requestPayerInfo</code>
+and <code>requestRecipientInfo</code> parameters to <code>false</code>.</p>
+<p>It is important to provide an <code>onInvalidInput</code> handler in this instance to ensure any validation errors are reported
+back to the payer.</p>
+<p>In addition a <code>nonce</code> parameter can be set that is included in the generation of the sig parameter included in
+the <code>returnUrl</code> (and in the args supplied to the <code>onCompleteCallback</code> handler). We recommend that you set this to a value
+that uniquely identifies an entity in your platform that this payment relates to - e.g. the same value
+as <code>booking_reference</code> in the sample below.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token keyword">var</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  env<span class="token operator">:</span> <span class="token string">"demo"</span><span class="token punctuation">,</span>
+  recipientCode<span class="token operator">:</span> <span class="token string">"Your Portal Code"</span><span class="token punctuation">,</span>
+  amount<span class="token operator">:</span> <span class="token number">1234.56</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Highly recommended for this configuration</span>
+  <span class="token function-variable function">onInvalidInput</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">errors</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    errors<span class="token punctuation">.</span><span class="token method function property-access">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span><span class="token property-access">msg</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Hide the information input boxes</span>
+  requestPayerInfo<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  requestRecipientInfo<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Pass in complete payer information</span>
+  firstName<span class="token operator">:</span> <span class="token string">"John"</span><span class="token punctuation">,</span>
+  lastName<span class="token operator">:</span> <span class="token string">"Doe"</span><span class="token punctuation">,</span>
+  email<span class="token operator">:</span> <span class="token string">"john.doe@flywire.com"</span><span class="token punctuation">,</span>
+  phone<span class="token operator">:</span> <span class="token string">"+44 1234 567 890"</span><span class="token punctuation">,</span>
+  address<span class="token operator">:</span> <span class="token string">"10, Downing St."</span><span class="token punctuation">,</span>
+  city<span class="token operator">:</span> <span class="token string">"London"</span><span class="token punctuation">,</span>
+  country<span class="token operator">:</span> <span class="token string">"GB"</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Pass in complete custom field information</span>
+  recipientFields<span class="token operator">:</span> <span class="token punctuation">{</span>
+    booking_reference<span class="token operator">:</span> <span class="token string">"REF1234"</span><span class="token punctuation">,</span>
+    additional_information<span class="token operator">:</span> <span class="token string">"This is a sample"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Supply a nonce to be included in the signature generation</span>
+  nonce<span class="token operator">:</span> <span class="token string">"REF1234"</span><span class="token punctuation">,</span>
+
+  returnUrl<span class="token operator">:</span> <span class="token string">"https://httpbin.org/get"</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div>
+<h3 id="webhooks"><a href="#webhooks" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Webhooks</h3>
+<p>This sample configuration includes the parameters to setup payment status webhook notifications to be sent to your
+servers.</p>
+<p>Notifications are POSTed to the URL specified in the <code>callbackUrl</code> parameter and will contain a payload
+that includes the value specified in the <code>callbackId</code> parameter. To trigger webhook notifications <strong>both</strong> these parameters
+must be supplied.</p>
+<p>As with the <code>nonce</code> parameter, we recommend that you set this to a value that uniquely identifies an entity
+in your platform that this payment relates to - e.g. the same value as <code>booking_reference</code> in the sample below.</p>
+<p>There are 2 versions of callbacks currently supported.</p>
+<ul>
+<li>Version 1 (Default)</li>
+<li>Version 2</li>
+</ul>
+<p>For new implementations we recommend using <code>callbackVersion: "2"</code> as these notifications contain additional
+information and status transitions.</p>
+<div class="alert border-l-4 p-4 mb-4 mt-4 alert-warning"><div class="flex items-start"><div class="flex-shrink-0"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="alert-icon mt-px w-6 h-6"><path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div> <div class="flex-grow ml-2 overflow-auto alert-content">
+For backwards compatibility we default to use version 1 of the callbacks 
+</div></div></div>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token keyword">var</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  env<span class="token operator">:</span> <span class="token string">"demo"</span><span class="token punctuation">,</span>
+  recipientCode<span class="token operator">:</span> <span class="token string">"Your Portal Code"</span><span class="token punctuation">,</span>
+  amount<span class="token operator">:</span> <span class="token number">1234.56</span><span class="token punctuation">,</span>
+
+  <span class="token function-variable function">onInvalidInput</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">errors</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    errors<span class="token punctuation">.</span><span class="token method function property-access">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span><span class="token property-access">msg</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  requestPayerInfo<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  requestRecipientInfo<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  returnUrl<span class="token operator">:</span> <span class="token string">"https://httpbin.org/get"</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Enable payment status notification callbacks</span>
+  callbackId<span class="token operator">:</span> <span class="token string">"REF1234"</span><span class="token punctuation">,</span>
+  callbackUrl<span class="token operator">:</span> <span class="token string">"https://api.yourdomain.com/flywire-notifications"</span><span class="token punctuation">,</span>
+  callbackVersion<span class="token operator">:</span> <span class="token string">"2"</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div>
+<h3 id="typical"><a href="#typical" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Typical</h3>
+<p>This configuration shows typical parameters that allows you to leverage the data capture and validation provided
+by Flywire, a custom sort order for payment options as well as setting up webhook notifications and secure,
+verifiable signature generation.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token keyword">var</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  env<span class="token operator">:</span> <span class="token string">"demo"</span><span class="token punctuation">,</span>
+  recipientCode<span class="token operator">:</span> <span class="token string">"Your Portal Code"</span><span class="token punctuation">,</span>
+  amount<span class="token operator">:</span> <span class="token number">1234.56</span><span class="token punctuation">,</span>
+
+  <span class="token function-variable function">onInvalidInput</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">errors</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    errors<span class="token punctuation">.</span><span class="token method function property-access">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span><span class="token property-access">msg</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  requestPayerInfo<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  requestPayerInfo<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  skipCompletedSteps<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Set any custom fields to read-only to prevent payers changing values</span>
+  <span class="token comment">// (in this configuration 'additional_information' will be editable)</span>
+  readonlyFields<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"booking_reference"</span><span class="token punctuation">,</span> <span class="token string">"client_id"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+  firstName<span class="token operator">:</span> <span class="token string">"John"</span><span class="token punctuation">,</span>
+  lastName<span class="token operator">:</span> <span class="token string">"Doe"</span><span class="token punctuation">,</span>
+  email<span class="token operator">:</span> <span class="token string">"john.doe@flywire.com"</span><span class="token punctuation">,</span>
+  phone<span class="token operator">:</span> <span class="token string">"+44 1234 567 890"</span><span class="token punctuation">,</span>
+  address<span class="token operator">:</span> <span class="token string">"10, Downing St."</span><span class="token punctuation">,</span>
+  city<span class="token operator">:</span> <span class="token string">"London"</span><span class="token punctuation">,</span>
+  country<span class="token operator">:</span> <span class="token string">"GB"</span><span class="token punctuation">,</span>
+
+  recipientFields<span class="token operator">:</span> <span class="token punctuation">{</span>
+    booking_reference<span class="token operator">:</span> <span class="token string">"REF1234"</span><span class="token punctuation">,</span>
+    client_id<span class="token operator">:</span> <span class="token string">"CLI1234"</span><span class="token punctuation">,</span>
+    additional_information<span class="token operator">:</span> <span class="token keyword null nil">null</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Show the cheapest local payment option first but prefer bank transfers</span>
+  <span class="token comment">// over cards and online methods if they are the same price</span>
+  paymentOptionsConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+    sort<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span> currency<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"local"</span><span class="token punctuation">,</span> <span class="token string">"foreign"</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> amount<span class="token operator">:</span> <span class="token string">"asc"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"bank_transfer"</span><span class="token punctuation">,</span> <span class="token string">"credit_card"</span><span class="token punctuation">,</span> <span class="token string">"online"</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  nonce<span class="token operator">:</span> <span class="token string">"REF1234"</span><span class="token punctuation">,</span>
+  returnUrl<span class="token operator">:</span> <span class="token string">"https://httpbin.org/get"</span><span class="token punctuation">,</span>
+
+  callbackId<span class="token operator">:</span> <span class="token string">"REF1234"</span><span class="token punctuation">,</span>
+  callbackUrl<span class="token operator">:</span> <span class="token string">"https://api.yourdomain.com/flywire-notifications"</span><span class="token punctuation">,</span>
+  callbackVersion<span class="token operator">:</span> <span class="token string">"2"</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div>
+<h2 id="configuration-parameters"><a href="#configuration-parameters" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Configuration Parameters</h2>
+<p>Most of the configuration parameters have been demonstrated in the sample configuration blocks above.
+Usage of each of these as well as some additional parameters are described in detail here.</p>
+<h3 id="environment"><a href="#environment" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Environment</h3>
+<p>By default our demo environment will be used if no <code>env</code> parameter is supplied.</p>
+<h4 id="available-values"><a href="#available-values" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Available Values</h4>
+<ul>
+<li><code>demo</code> (Default)</li>
+<li><code>prod</code></li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Set the target environment (demo, prod)</span>
+env<span class="token operator">:</span> <span class="token string">"demo"</span><span class="token punctuation">,</span>
+</code></pre></div>
+<h3 id="recipient-code"><a href="#recipient-code" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Recipient Code</h3>
+<p>The <code>recipientCode</code> parameter takes the 3 letter code that directs a request through to the appropriate
+Flywire payment portal. This may differ between your demo and production environments.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Set your unique code (may differ between demo and prod)</span>
+recipientCode<span class="token operator">:</span> <span class="token string">"Your Portal Code"</span><span class="token punctuation">,</span>
+</code></pre></div>
+<h3 id="amount"><a href="#amount" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Amount</h3>
+<p>In order to successfully initiate a payment and load the Flywire checkout the <code>amount</code> parameter must be set.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Set the value of the payment to be processed</span>
+amount<span class="token operator">:</span> <span class="token number">1234.56</span><span class="token punctuation">,</span>
+</code></pre></div>
+<h3 id="input-validation"><a href="#input-validation" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Input Validation</h3>
+<p>If any of the information passed to the checkout does not pass validation then an array of error objects will
+be returned to <code>onInvalidInput</code> callback function.</p>
+<p>In the case where invalid payer information is passed to the
+checkout and <code>requestPayerInfo</code> or <code>requestRecipientInfo</code> is set to <code>true</code> the payer will be able to correct any
+invalid details within the checkout.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Recommended but not required - include a validation callback.</span>
+<span class="token comment">// Please provide your own validation reporting feature rather</span>
+<span class="token comment">// than alerting the user and logging to the console.</span>
+<span class="token function-variable function">onInvalidInput</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">errors</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    errors<span class="token punctuation">.</span><span class="token method function property-access">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span><span class="token property-access">msg</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div>
+<p>Below is an example of the errors array that is passed as an argument into the function.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-json"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    id<span class="token operator">:</span> <span class="token string">"email"</span><span class="token punctuation">,</span>
+    msg<span class="token operator">:</span> <span class="token string">"Please enter a valid email address"</span><span class="token punctuation">,</span>
+    msgId<span class="token operator">:</span> <span class="token string">"emailConstraintNotice"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    id<span class="token operator">:</span> <span class="token string">"amount"</span><span class="token punctuation">,</span>
+    msg<span class="token operator">:</span> <span class="token string">"Required"</span><span class="token punctuation">,</span>
+    msgId<span class="token operator">:</span> <span class="token string">"validation.required"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    id<span class="token operator">:</span> <span class="token string">"amount"</span><span class="token punctuation">,</span>
+    msg<span class="token operator">:</span> <span class="token string">"Invalid amount format"</span><span class="token punctuation">,</span>
+    msgId<span class="token operator">:</span> <span class="token string">"validation.invalidAmountFormat"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>;
+</code></pre></div>
+<p>Messages in the <code>msg</code> field will be translated into the language set by the <code>locale</code> parameter when initiating
+the checkout. Please use the <code>msgId</code> field to test for and handle specific error types.</p>
+<div class="alert border-l-4 p-4 mb-4 mt-4 alert-info"><div class="flex items-start"><div class="flex-shrink-0"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="alert-icon mt-px w-6 h-6"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div> <div class="flex-grow ml-2 overflow-auto alert-content">
+<p>You can view metadata related to all the fields required in the configuration object by checking the
+<code>window.FlywirePayment.fields</code> object in the browser console after the flywire-payment.js script has loaded.</p>
+</div></div></div>
+<h3 id="payer-info"><a href="#payer-info" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Payer Info</h3>
+<p>Payer information can be set by including the following parameters.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Pass in payer information</span>
+firstName<span class="token operator">:</span> <span class="token string">"John"</span><span class="token punctuation">,</span>
+lastName<span class="token operator">:</span> <span class="token string">"Doe"</span><span class="token punctuation">,</span>
+email<span class="token operator">:</span> <span class="token string">"john.doe@flywire.com"</span><span class="token punctuation">,</span>
+phone<span class="token operator">:</span> <span class="token string">"+44 1234 567 890"</span><span class="token punctuation">,</span>
+address<span class="token operator">:</span> <span class="token string">"10, Downing St."</span><span class="token punctuation">,</span>
+city<span class="token operator">:</span> <span class="token string">"London"</span><span class="token punctuation">,</span>
+country<span class="token operator">:</span> <span class="token string">"GB"</span><span class="token punctuation">,</span>
+</code></pre></div>
+<h3 id="custom-info"><a href="#custom-info" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Custom Info</h3>
+<p>For any custom fields that have been added to you portal this information can be set by including the <code>recipientFields</code> parameter.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Pass in portal specific custom fields</span>
+recipientFields<span class="token operator">:</span> <span class="token punctuation">{</span>
+  booking_reference<span class="token operator">:</span> <span class="token string">"REF1234"</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div>
+<div class="alert border-l-4 p-4 mb-4 mt-4 alert-info"><div class="flex items-start"><div class="flex-shrink-0"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="alert-icon mt-px w-6 h-6"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div> <div class="flex-grow ml-2 overflow-auto alert-content">
+<p>These fields vary by portal - please check your specific portal configuration to view your available fields.</p>
+</div></div></div>
+<h3 id="request-payer-info"><a href="#request-payer-info" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Request Payer Info</h3>
+<p>If you would like Flywire to capture either all or any missing or invalid payer information as part of the checkout process
+you should set the <code>requestPayerInfo</code> parameter to <code>true</code>.</p>
+<p>Alternatively you should set it to <code>false</code> (or omit the parameter) and supply the payer information values in the
+configuration object.</p>
+<p>If you set the value to false you should implment an <code>onInvalidInput</code> handler to display any validation errors to the payer.</p>
+<h4 id="available-values-1"><a href="#available-values-1" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Available Values</h4>
+<ul>
+<li><code>true</code></li>
+<li><code>false</code> (Default)</li>
+</ul>
+<div class="alert border-l-4 p-4 mb-4 mt-4 alert-warning"><div class="flex items-start"><div class="flex-shrink-0"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="alert-icon mt-px w-6 h-6"><path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div> <div class="flex-grow ml-2 overflow-auto alert-content">
+<p>Please note that the country should be the <strong>2-letter ISO country code</strong></p>
+</div></div></div>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Display the payer information input boxes</span>
+requestPayerInfo<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+<span class="token comment">// Pass in partial payer information (missing parameters can</span>
+<span class="token comment">// alternatively be omitted rather than included with empty</span>
+<span class="token comment">// values)</span>
+firstName<span class="token operator">:</span> <span class="token string">"John"</span><span class="token punctuation">,</span>
+lastName<span class="token operator">:</span> <span class="token string">"Doe"</span><span class="token punctuation">,</span>
+email<span class="token operator">:</span> <span class="token string">"john.doe@flywire.com"</span><span class="token punctuation">,</span>
+phone<span class="token operator">:</span> <span class="token string">"+44 1234 567 890"</span><span class="token punctuation">,</span>
+address<span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+city<span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+country<span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+</code></pre></div>
+<p>Alternatively all of the following fields must be supplied with values.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Hide the payer information input boxes</span>
+requestPayerInfo<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+<span class="token comment">// Pass in complete payer information</span>
+firstName<span class="token operator">:</span> <span class="token string">"John"</span><span class="token punctuation">,</span>
+lastName<span class="token operator">:</span> <span class="token string">"Doe"</span><span class="token punctuation">,</span>
+email<span class="token operator">:</span> <span class="token string">"john.doe@flywire.com"</span><span class="token punctuation">,</span>
+phone<span class="token operator">:</span> <span class="token string">"+44 1234 567 890"</span><span class="token punctuation">,</span>
+address<span class="token operator">:</span> <span class="token string">"10, Downing St."</span><span class="token punctuation">,</span>
+city<span class="token operator">:</span> <span class="token string">"London"</span><span class="token punctuation">,</span>
+country<span class="token operator">:</span> <span class="token string">"GB"</span><span class="token punctuation">,</span>
+
+<span class="token comment">// Implement an error handler</span>
+<span class="token function-variable function">onInvalidInput</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">errors</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    errors<span class="token punctuation">.</span><span class="token method function property-access">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span><span class="token property-access">msg</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div>
+<h3 id="request-custom-info"><a href="#request-custom-info" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Request Custom Info</h3>
+<p>If you would like Flywire to capture either all or any missing or invalid custom fields as part of the checkout
+process you should set the <code>requestRecipientInfo</code> parameter to <code>true</code>.</p>
+<p>Alternatively you should set it to <code>false</code> (or omit the parameter) and supply all the <code>recipientFields</code> information
+in the configuration object.</p>
+<p>If you set <code>requestRecipientInfo</code> to <code>false</code> you should implment an <code>onInvalidInput</code> handler to display any validation
+errors to the payer.</p>
+<h4 id="available-values-2"><a href="#available-values-2" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Available Values</h4>
+<ul>
+<li><code>true</code></li>
+<li><code>false</code> (Default)</li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Display the custom field input boxes</span>
+requestRecipientInfo<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+<span class="token comment">// Pass in partial recipientFields information (missing parameters can</span>
+<span class="token comment">// alternatively be omitted rather than included with empty values)</span>
+recipientFields<span class="token operator">:</span> <span class="token punctuation">{</span>
+    booking_reference<span class="token operator">:</span> <span class="token string">""</span>
+<span class="token punctuation">}</span>
+</code></pre></div>
+<p>Alternatively all of the required fields must be supplied with values.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Hide the custom field input boxes</span>
+requestRecipientInfo<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+<span class="token comment">// Pass in complete payer information</span>
+recipientFields<span class="token operator">:</span> <span class="token punctuation">{</span>
+    booking_reference<span class="token operator">:</span> <span class="token string">"REF1234"</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+<span class="token comment">// Implement an error handler</span>
+<span class="token function-variable function">onInvalidInput</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">errors</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    errors<span class="token punctuation">.</span><span class="token method function property-access">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span><span class="token property-access">msg</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div>
+<h3 id="read-only"><a href="#read-only" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Read Only</h3>
+<p>If you would like any fields to be read-only (e.g. firstName, country etc..) you can use the <code>readonlyFields</code> array
+to specify which fields you would like to be un-editable.</p>
+<p>These fields can be either the payer info or custom info fields.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Pass in all portal specific required custom fields</span>
+firstName<span class="token operator">:</span> <span class="token string">"John"</span><span class="token punctuation">,</span>
+lastName<span class="token operator">:</span> <span class="token string">"Doe"</span><span class="token punctuation">,</span>
+country<span class="token operator">:</span> <span class="token string">"US"</span><span class="token punctuation">,</span>
+
+requestPayerInfo<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+requestRecipientInfo<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+recipientFields<span class="token operator">:</span> <span class="token punctuation">{</span>
+    booking_reference<span class="token operator">:</span> <span class="token string">"REF1234"</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+readonlyFields<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"firstName"</span><span class="token punctuation">,</span>
+    <span class="token string">"lastName"</span><span class="token punctuation">,</span>
+    <span class="token string">"country"</span><span class="token punctuation">,</span>
+    <span class="token string">"booking_reference"</span>
+<span class="token punctuation">]</span><span class="token punctuation">,</span>
+</code></pre></div>
+<h3 id="skip-steps"><a href="#skip-steps" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Skip Steps</h3>
+<p>In order to avoid payers clicking through unnecessary steps in the checkout you can set the <code>skipCompletedSteps</code>
+parameter to <code>true</code> alongside the <code>requestPayerInfo</code> and <code>requestRecipientInfo</code> parameters as necessary.</p>
+<p>This is useful if you are unsure whether either the payer details or custom field values you supply will be complete or
+partial.</p>
+<p>With this set to <code>true</code> if all the required information has been supplied the checkout process will jump
+to the next step automatically.</p>
+<p>There is also the option to skip only a certain step. You can do this by specifying the step name. For example
+you can skip the custom fields step if it has been completed by specifying <code>['requestRecipientInfo']</code>.</p>
+<h4 id="available-values-3"><a href="#available-values-3" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Available Values</h4>
+<ul>
+<li><code>true</code></li>
+<li><code>false</code> (Default)</li>
+<li><code>[step name]</code> (<code>'requestPayerInfo'</code> or <code>'requestRecipientInfo'</code>)</li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code> <span class="token comment">// Display the payer and custom information input boxes</span>
+ <span class="token comment">// skipping either page if all the information has been passed in.</span>
+ requestPayerInfo<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+ requestRecipientInfo<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+ skipCompletedSteps<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+</code></pre></div>
+<div class="alert border-l-4 p-4 mb-4 mt-4 alert-warning"><div class="flex items-start"><div class="flex-shrink-0"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="alert-icon mt-px w-6 h-6"><path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div> <div class="flex-grow ml-2 overflow-auto alert-content">
+<p>You should not use <code>skipCompletedSteps</code> if you want to give the payer the chance to edit the fields information.</p>
+</div></div></div>
+<h3 id="filtering"><a href="#filtering" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Filtering</h3>
+<p>By default Flywire will show all available payment options for a given a portal during checkout.</p>
+<p>In certain circumstances it may be desirable to restrict the methods available to your customers based on a set of rules (e.g. only accept bank
+transfers for payments overs a certain value, only show card payments a certain time before a booking etc).</p>
+<p>To enable this the Flywire checkout allows you to filter the payment options offered by payment type and by payer currency.
+Filters are supplied in the <code>paymentOptionsConfig</code>  parameter.</p>
+<h4 id="available-payment-type-filters"><a href="#available-payment-type-filters" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Available Payment Type Filters</h4>
+<ul>
+<li><code>bank_transfer</code></li>
+<li><code>credit_card</code> (Show all card payment options e.g. debit cards)</li>
+<li><code>online</code> (Show all online alternative payment options e.g. PayPal)</li>
+</ul>
+<h4 id="availble-currency-filters"><a href="#availble-currency-filters" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Availble Currency Filters</h4>
+<ul>
+<li><code>local</code> (Only show payment options in the payers local currency e.g. only GBP options for a payer in the UK)</li>
+<li><code>foreign</code> (Only show payment options not in the payers local currency e.g. everything but GBP options for a payer in the UK)</li>
+<li><code>fx</code> (Only show payment options that are a different currency to the collection currency)</li>
+<li><code>nonFX</code> (Only show payment options that are in the same currency as the collection currency)</li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code>paymentOptionsConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Only allow local card and online payments</span>
+    filters<span class="token operator">:</span> <span class="token punctuation">{</span>
+        type<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'online'</span><span class="token punctuation">,</span> <span class="token string">'credit_card'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        currency<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'fx'</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div>
+<h3 id="sorting"><a href="#sorting" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Sorting</h3>
+<p>Flywire makes every effort to display the payment option to payers in the most appropriate order based on payer
+behaviour.</p>
+<p>However, we recognise that you may prefer to change this order to better suit yours and your payers needs.</p>
+<p>To enable this the Flywire checkout allows you to sort the payment options offered by payment type, payment currency and/or amount.
+The sort orders are supplied in the <code>paymentOptionsConfig</code>  parameter.</p>
+<h4 id="availble-payment-type-sort-options"><a href="#availble-payment-type-sort-options" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Availble Payment Type Sort Options</h4>
+<ul>
+<li><code>bank_transfer</code></li>
+<li><code>credit_card</code></li>
+<li><code>online</code> (This refers to online alternative payment options e.g. PayPal)</li>
+</ul>
+<h4 id="availble-currency-sort-options"><a href="#availble-currency-sort-options" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Availble Currency Sort Options</h4>
+<ul>
+<li><code>local</code> (The payers local currency)</li>
+<li><code>foreign</code> (Not the payers local currency)</li>
+</ul>
+<h4 id="availble-amount-sort-options"><a href="#availble-amount-sort-options" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Availble Amount Sort Options</h4>
+<ul>
+<li><code>asc</code> (ascending amount order)</li>
+<li><code>desc</code> (descending amount order)</li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code>paymentOptionsConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Show the cheapest local payment option first but prefer bank transfers</span>
+  <span class="token comment">// over cards and online methods if they are the same price</span>
+  sort<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> currency<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"local"</span><span class="token punctuation">,</span> <span class="token string">"foreign"</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> amount<span class="token operator">:</span> <span class="token string">"asc"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"bank_transfer"</span><span class="token punctuation">,</span> <span class="token string">"credit_card"</span><span class="token punctuation">,</span> <span class="token string">"online"</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div>
+<div class="alert border-l-4 p-4 mb-4 mt-4 alert-info"><div class="flex items-start"><div class="flex-shrink-0"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="alert-icon mt-px w-6 h-6"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div> <div class="flex-grow ml-2 overflow-auto alert-content">
+<p>The order in which <code>type</code>, <code>currency</code> and <code>amount</code> are set in the sort array affects the final sort order.</p>
+</div></div></div>
+<h3 id="nonce"><a href="#nonce" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Nonce</h3>
+<p>Flywire includes a <code>sig</code> parameter in query string of the return URL and in the args supplied to the <code>onCompleteCallback</code> handler.</p>
+<p>To include your own parameter in the generation of the signature please supply a value to the <code>nonce</code> parameter.</p>
+<p>We recommend that you set this to a value that uniquely identifies the entity in your platform that this payment relates
+to - e.g. a booking reference, reservation number, registration id etc.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Supply a nonce to be used in signature generation</span>
+nonce<span class="token operator">:</span> <span class="token string">"REF1234"</span><span class="token punctuation">,</span>
+</code></pre></div>
+<p>Details of how to verify the signature can be found in the <a href="/en/checkout/implementation#signature-verification">verify signature</a>
+section.</p>
+<h3 id="return-url"><a href="#return-url" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Return URL</h3>
+<p>Once a payment is completed the checkout modal is closed. If you have specified a value for the
+return URL the page will be redirect to the URL specified in the <code>returnUrl</code> parameter.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Set the return URL where payers are redirected to on completion</span>
+returnUrl<span class="token operator">:</span> <span class="token string">"https://httpbin.org/get"</span><span class="token punctuation">;</span>
+</code></pre></div>
+<p>The following parameters are included in the query string of the <code>returnUrl</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Item</th><th>Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Reference</td><td>reference</td><td>e.g. <code>FLY123456789</code></td></tr><tr><td>Status</td><td>status</td><td>Possible values are <code>pending</code>, <code>success</code>, <code>error</code></td></tr><tr><td>Amount</td><td>amount</td><td>e.g. 1234.56</td></tr><tr><td>Payment Method</td><td>payment_method</td><td>Possible values are <code>bank_transfer</code>, <code>online</code></td></tr><tr><td>Nonce (if supplied)</td><td>payment_method</td><td>e.g. <code>REF1234</code></td></tr><tr><td>Signature</td><td>sig</td><td>Please refer to the <a href="/en/checkout/implementation#signature-verification">verify signature</a> section</td></tr></tbody></table>
+<div class="alert border-l-4 p-4 mb-4 mt-4 alert-info"><div class="flex items-start"><div class="flex-shrink-0"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="alert-icon mt-px w-6 h-6"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div> <div class="flex-grow ml-2 overflow-auto alert-content">
+<p>The <code>pending</code> status always returned when the payer initates a bank transfer and never returned for online payments.</p>
+</div></div></div>
+<p>An example return URL is:</p>
+<p><a href="http://httpbin.org/get?reference=FLY123567890&status=success&amount=1234.56&payment_method=online&_=REF1234&sig=abcdefgh" rel="nofollow noopener noreferrer" target="_blank">http://httpbin.org/get?reference=FLY123567890&status=success&amount=1234.56&payment_method=online&_=REF1234&sig=abcdefgh</a></p>
+<h3 id="oncompletecallback"><a href="#oncompletecallback" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>onCompleteCallback</h3>
+<p>An alternative to using the <code>returnUrl</code> is to specify a function as the <code>onCompleteCallback</code> parameter. When
+this is done, control is passed back to this function once the modal has closed.</p>
+<div class="alert border-l-4 p-4 mb-4 mt-4 alert-warning"><div class="flex items-start"><div class="flex-shrink-0"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="alert-icon mt-px w-6 h-6"><path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div> <div class="flex-grow ml-2 overflow-auto alert-content">
+<p>You should only include a value for either the <code>returnUrl</code> parameter or for the <code>onCompleteCallback</code> parameter, never both.</p>
+</div></div></div>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// The callback function that is called once the payment is complete</span>
+<span class="token function-variable function">onCompleteCallback</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div>
+<p>The following parameters are included as properties of the args object passed to the <code>onCompleteCallback</code> handler.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Item</th><th>Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Reference</td><td>reference</td><td>e.g. <code>FLY123456789</code></td></tr><tr><td>Status</td><td>status</td><td>Possible values are <code>pending</code>, <code>success</code>, <code>error</code></td></tr><tr><td>Amount</td><td>amount</td><td>e.g. 1234.56</td></tr><tr><td>Payment Method</td><td>payment_method</td><td>Possible values are <code>bank_transfer</code>, <code>online</code></td></tr><tr><td>Nonce (if supplied)</td><td>payment_method</td><td>e.g. <code>REF1234</code></td></tr><tr><td>Signature</td><td>sig</td><td>Please refer to the <a href="/en/checkout/implementation#signature-verification">verify signature</a> section</td></tr></tbody></table>
+<div class="alert border-l-4 p-4 mb-4 mt-4 alert-info"><div class="flex items-start"><div class="flex-shrink-0"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="alert-icon mt-px w-6 h-6"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div> <div class="flex-grow ml-2 overflow-auto alert-content">
+<p>The <code>pending</code> status always returned when the payer initates a bank transfer and never returned for online payments.</p>
+</div></div></div>
+<p>An example of the args passed to the handler is:</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token punctuation">{</span>
+    reference<span class="token operator">:</span> <span class="token string">"FLY1234567890"</span><span class="token punctuation">,</span>
+    status<span class="token operator">:</span> <span class="token string">"success"</span><span class="token punctuation">,</span>
+    amount<span class="token operator">:</span> <span class="token string">"1234.56"</span><span class="token punctuation">,</span>
+    paymentMethod<span class="token operator">:</span> <span class="token string">"online"</span><span class="token punctuation">,</span>
+    _<span class="token operator">:</span> <span class="token string">"REF1234"</span><span class="token punctuation">,</span>
+    sig<span class="token operator">:</span> <span class="token string">"abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890"</span>
+<span class="token punctuation">}</span>
+</code></pre></div>
+<h3 id="oncancel"><a href="#oncancel" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>onCancel</h3>
+<p>In some instances it may be useful to handle a payer closing the checkout window by clicking the <code>X</code> button.</p>
+<p>Should you need to handle this event you can supply an <code>onCancel</code> callback.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// The callback function that is called once the payment is complete</span>
+<span class="token function-variable function">onCancel</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">"Checkout cancelled"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div>
+<h3 id="modal-handle"><a href="#modal-handle" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Modal Handle</h3>
+<p>Should you need to keep a reference to the checkout window in order to close it programatically you can get the handle to
+the checkout modal from the <code>inititate</code> function.</p>
+<p>The window handle has two functions availale on it <code>render()</code> and <code>close()</code>.</p>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token keyword">var</span> modal <span class="token operator">=</span> <span class="token dom variable">window</span><span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">FlywirePayment</span></span><span class="token punctuation">.</span><span class="token method function property-access">initiate</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span><span class="token punctuation">;</span>
+modal<span class="token punctuation">.</span><span class="token method function property-access">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  modal<span class="token punctuation">.</span><span class="token method function property-access">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">"Checkout closed after 10 seconds"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">10</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div>
+<h3 id="extended-validation"><a href="#extended-validation" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Extended Validation</h3>
+<p>Flywire performs quality checks on the information provided for every payment.</p>
+<p>In cases where the information provided doesn’t pass our validation checks it will be processed but then placed in a quality
+check queue. To reduce the chances of payments being held in this queue the Flywire checkout validates the information provided
+up-front and alert payers to any potential validation errors before processing.</p>
+<p>Should you wish to disable this feature you can set the <code>skipMQC</code> parameter to <code>true</code>.</p>
+<h4 id="available-values-4"><a href="#available-values-4" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Available Values</h4>
+<ul>
+<li><code>true</code></li>
+<li><code>false</code> (Default)</li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Skip the quality check validation rules</span>
+skipMQC<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+</code></pre></div>
+<h3 id="split-payments"><a href="#split-payments" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Split Payments</h3>
+<p>If you would like Flywire to automatically distribute part of the payment amount to one or more of your partners
+(that must also be enrolled with Flywire) you can use the <code>payables</code> parameter to set up split payments.</p>
+<p>Each payable takes the amount specified in the payable away from the <code>amount</code> of the payment and pays it out to the specified recipient.
+The following parameters make up a split payment configuration within the <code>payables</code> array.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Item</th><th>Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Amount</td><td>amount</td><td>e.g. <code>10.00</code> (mandatory) - must not exceed the base amount</td></tr><tr><td>Recipient</td><td>recipient</td><td>e.g. <code>FWB</code> (mandatory) - 3 letter Partner Portal code</td></tr><tr><td>Description</td><td>description</td><td>e.g. <code>Commission for booking ref. 123456</code></td></tr></tbody></table>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// The base portal code - any remaining amount left after the payables</span>
+<span class="token comment">// distribution will be sent to this account (in this instance 70.00)</span>
+recipientCode<span class="token operator">:</span> <span class="token string">"Your Portal Code"</span><span class="token punctuation">,</span>
+
+<span class="token comment">// The base (total) amount charged to the payer</span>
+amount<span class="token operator">:</span> <span class="token number">100.00</span><span class="token punctuation">,</span>
+
+<span class="token comment">// Split payments configuration</span>
+payables<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Subtracted from the base of 100.00</span>
+        amount<span class="token operator">:</span> <span class="token number">10.00</span><span class="token punctuation">,</span>
+        recipient<span class="token operator">:</span> <span class="token string">"First Partner Portal Code"</span><span class="token punctuation">,</span>
+        description<span class="token operator">:</span> <span class="token string">"First partner payment description"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Subtracted from the base of 100.00</span>
+        amount<span class="token operator">:</span> <span class="token number">20.00</span><span class="token punctuation">,</span>
+        recipient<span class="token operator">:</span> <span class="token string">"Second Partner Portal Code"</span><span class="token punctuation">,</span>
+        description<span class="token operator">:</span> <span class="token string">"Second partner payment description"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div>
+<p>Please bear in mind the following constraints when using split payments.</p>
+<ul>
+<li>The <code>payables</code> array must contain at least one element.</li>
+<li>The <code>payables</code> array cannot include duplicate <code>recipient</code>’s.</li>
+<li>Each <code>recipient</code> must be a valid Flywire 3 letter code and cannot be be the same as the base payment <code>recepientCode</code>.</li>
+<li>The sum of all payable <code>amount</code> parameters must not exceed the base payment amount.</li>
+</ul>
+<h3 id="locale"><a href="#locale" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Locale</h3>
+<p>The language of the payment experience can be fixed by supplying the locale parameter. If this value is
+omittred (recommended) then the browser language will be used (where supported)</p>
+<h4 id="available-values-5"><a href="#available-values-5" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Available Values</h4>
+<ul>
+<li><code>en</code> (English)</li>
+<li><code>es</code> (Spanish)</li>
+<li><code>fr</code> (French)</li>
+<li><code>id</code> (Indonesian)</li>
+<li><code>ja</code> (Japanese)</li>
+<li><code>ko</code> (Korean)</li>
+<li><code>pt</code> (Portuguese)</li>
+<li><code>vi</code> (Vietnamese)</li>
+<li><code>zh</code> (Chinese)</li>
+</ul>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Set the locale the checkout should be displayed in</span>
+locale<span class="token operator">:</span> <span class="token string">"en"</span><span class="token punctuation">,</span>
+</code></pre></div>
+<h3 id="webhook-notifications"><a href="#webhook-notifications" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Webhook Notifications</h3>
+<p>The ​<code>callbackUrl</code>, <code>callbackId</code> are optional parameters for systems that require real-time payment status updates to
+be POSTed to their servers. To use callbacks you must set values for <strong>both</strong>  of these parameters</p>
+<p>The <code>callbackUrl</code> should be a publicly accessible endpoint.</p>
+<p>We recommend that you set the <code>callbackId</code> to a value that uniquely identifies the entity in your platform that this
+payment relates to - e.g. a booking reference, reservation number, registration id etc.</p>
+<p>There are 2 <code>callbackVersion</code> values currently supported.</p>
+<ul>
+<li><code>"1"</code> (Default) - please read <a href="/en/webhooks/notifications-v1">v1. Notifications</a></li>
+<li><code>"2"</code> (Recommended) - please read <a href="/en/webhooks/notifications-v2">v2. Notifications</a></li>
+</ul>
+<div class="alert border-l-4 p-4 mb-4 mt-4 alert-warning"><div class="flex items-start"><div class="flex-shrink-0"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="alert-icon mt-px w-6 h-6"><path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div> <div class="flex-grow ml-2 overflow-auto alert-content">
+<p>For backwards compatibility we default to use version 1 of the callbacks however, we recommend that you use the latest
+version (currently version 2) as these notifications contain additional information and status transitions.</p>
+</div></div></div>
+<div class="nuxt-content-highlight"><pre class="line-numbers language-js"><code><span class="token comment">// Enable payment status notification callbacks</span>
+callbackUrl<span class="token operator">:</span> <span class="token string">"https://api.your-domain.com/flywire-notifications"</span><span class="token punctuation">,</span>
+callbackId<span class="token operator">:</span> <span class="token string">"REF1234"</span><span class="token punctuation">,</span>
+callbackVersion<span class="token operator">:</span> <span class="token string">"2"</span>
+</code></pre></div>
+<p>Please refer to the webhooks documentation for details on how to process notifications.</p>
+<h2 id="signature-verification"><a href="#signature-verification" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Signature Verification</h2>
+<p>In order to verify that the parameters included in the <code>returnUrl</code> and the args supplied to the <code>onCompleteCallback</code> handler,
+Flywire includes a <code>sig</code> parameter.</p>
+<p>This is signature is the SHA256 hash of the parameters plus a shared secret. Please contact your account manager to
+arrange the transfer of your shared secret.</p>
+<div class="alert border-l-4 p-4 mb-4 mt-4 alert-warning"><div class="flex items-start"><div class="flex-shrink-0"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="alert-icon mt-px w-6 h-6"><path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div> <div class="flex-grow ml-2 overflow-auto alert-content">
+<p>You should only ever verify the signature on your server and you should <strong>never send your shared secret to the client’s browser</strong>.</p>
+</div></div></div>
+<div class="code-group" data-v-67ddf998><div class="rounded-t-md border-b-2 border-gray-700 px-2 bg-gray-800 text-sm text-white relative" data-v-67ddf998> <span class="highlight-underline" data-v-67ddf998></span></div> 
+  <div class="code-block active" data-v-15fab0cb>
+<div class="nuxt-content-highlight" data-v-15fab0cb><pre class="line-numbers language-js" data-v-15fab0cb><code data-v-15fab0cb><span class="token keyword" data-v-15fab0cb>const</span> crypto <span class="token operator" data-v-15fab0cb>=</span> <span class="token function" data-v-15fab0cb>require</span><span class="token punctuation" data-v-15fab0cb>(</span><span class="token string" data-v-15fab0cb>"crypto"</span><span class="token punctuation" data-v-15fab0cb>)</span><span class="token punctuation" data-v-15fab0cb>;</span>
+
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token comment" data-v-15fab0cb>// Retrieve this value from your settings</span>
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token keyword" data-v-15fab0cb>const</span> sharedSecret <span class="token operator" data-v-15fab0cb>=</span> <span class="token string" data-v-15fab0cb>"1234567890123456789012345678901234567890"</span><span class="token punctuation" data-v-15fab0cb>;</span>
+
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token comment" data-v-15fab0cb>// Retrieve these values from the returnURL query string params</span>
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token keyword" data-v-15fab0cb>const</span> _ <span class="token operator" data-v-15fab0cb>=</span> <span class="token string" data-v-15fab0cb>"REF1234"</span><span class="token punctuation" data-v-15fab0cb>;</span>
+<span class="token keyword" data-v-15fab0cb>const</span> reference <span class="token operator" data-v-15fab0cb>=</span> <span class="token string" data-v-15fab0cb>"FLY1234567890"</span><span class="token punctuation" data-v-15fab0cb>;</span>
+<span class="token keyword" data-v-15fab0cb>const</span> status <span class="token operator" data-v-15fab0cb>=</span> <span class="token string" data-v-15fab0cb>"success"</span><span class="token punctuation" data-v-15fab0cb>;</span>
+<span class="token keyword" data-v-15fab0cb>const</span> amount <span class="token operator" data-v-15fab0cb>=</span> <span class="token string" data-v-15fab0cb>"1234.56"</span><span class="token punctuation" data-v-15fab0cb>;</span>
+<span class="token keyword" data-v-15fab0cb>const</span> paymentMethod <span class="token operator" data-v-15fab0cb>=</span> <span class="token string" data-v-15fab0cb>"online"</span><span class="token punctuation" data-v-15fab0cb>;</span>
+<span class="token keyword" data-v-15fab0cb>const</span> sig <span class="token operator" data-v-15fab0cb>=</span> <span class="token string" data-v-15fab0cb>"631da0e951478c11bcb9831764de45c21a9c79d2a3b76361dd57a7127219ebcb"</span><span class="token punctuation" data-v-15fab0cb>;</span>
+
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token comment" data-v-15fab0cb>// Regenerate the signature locally</span>
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token keyword" data-v-15fab0cb>const</span> data <span class="token operator" data-v-15fab0cb>=</span> _ <span class="token operator" data-v-15fab0cb>+</span> sharedSecret <span class="token operator" data-v-15fab0cb>+</span> reference <span class="token operator" data-v-15fab0cb>+</span> status <span class="token operator" data-v-15fab0cb>+</span> amount <span class="token operator" data-v-15fab0cb>+</span> paymentMethod<span class="token punctuation" data-v-15fab0cb>;</span>
+<span class="token keyword" data-v-15fab0cb>const</span> signature <span class="token operator" data-v-15fab0cb>=</span> <span class="token function" data-v-15fab0cb>generateSignature</span><span class="token punctuation" data-v-15fab0cb>(</span>data<span class="token punctuation" data-v-15fab0cb>)</span><span class="token punctuation" data-v-15fab0cb>;</span>
+
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token comment" data-v-15fab0cb>// Compare and continue</span>
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token keyword control-flow" data-v-15fab0cb>if</span> <span class="token punctuation" data-v-15fab0cb>(</span>signature <span class="token operator" data-v-15fab0cb>===</span> sig<span class="token punctuation" data-v-15fab0cb>)</span> <span class="token punctuation" data-v-15fab0cb>{</span>
+  <span class="token console class-name" data-v-15fab0cb>console</span><span class="token punctuation" data-v-15fab0cb>.</span><span class="token method function property-access" data-v-15fab0cb>log</span><span class="token punctuation" data-v-15fab0cb>(</span><span class="token string" data-v-15fab0cb>"Match"</span><span class="token punctuation" data-v-15fab0cb>)</span><span class="token punctuation" data-v-15fab0cb>;</span>
+<span class="token punctuation" data-v-15fab0cb>}</span>
+
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token comment" data-v-15fab0cb>// Utility function</span>
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token keyword" data-v-15fab0cb>function</span> <span class="token function" data-v-15fab0cb>generateSignature</span><span class="token punctuation" data-v-15fab0cb>(</span><span class="token parameter" data-v-15fab0cb>data<span class="token punctuation" data-v-15fab0cb>,</span> sharedSecret</span><span class="token punctuation" data-v-15fab0cb>)</span> <span class="token punctuation" data-v-15fab0cb>{</span>
+  <span class="token keyword" data-v-15fab0cb>const</span> hash <span class="token operator" data-v-15fab0cb>=</span> crypto<span class="token punctuation" data-v-15fab0cb>.</span><span class="token method function property-access" data-v-15fab0cb>createHash</span><span class="token punctuation" data-v-15fab0cb>(</span><span class="token string" data-v-15fab0cb>"sha256"</span><span class="token punctuation" data-v-15fab0cb>)</span><span class="token punctuation" data-v-15fab0cb>;</span>
+  hash<span class="token punctuation" data-v-15fab0cb>.</span><span class="token method function property-access" data-v-15fab0cb>update</span><span class="token punctuation" data-v-15fab0cb>(</span>data<span class="token punctuation" data-v-15fab0cb>)</span><span class="token punctuation" data-v-15fab0cb>;</span>
+
+  <span class="token keyword control-flow" data-v-15fab0cb>return</span> hash<span class="token punctuation" data-v-15fab0cb>.</span><span class="token method function property-access" data-v-15fab0cb>digest</span><span class="token punctuation" data-v-15fab0cb>(</span><span class="token string" data-v-15fab0cb>"hex"</span><span class="token punctuation" data-v-15fab0cb>)</span><span class="token punctuation" data-v-15fab0cb>;</span>
+<span class="token punctuation" data-v-15fab0cb>}</span>
+</code></pre></div>
+  </div>
+  <div class="code-block" data-v-15fab0cb>
+<div class="nuxt-content-highlight" data-v-15fab0cb><pre class="line-numbers language-php" data-v-15fab0cb><code data-v-15fab0cb><span class="token php language-php" data-v-15fab0cb><span class="token delimiter important" data-v-15fab0cb>&lt;?php</span>
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token comment" data-v-15fab0cb>// Retrieve this value from your settings</span>
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token variable" data-v-15fab0cb>$sharedSecret</span> <span class="token operator" data-v-15fab0cb>=</span> <span class="token string single-quoted-string" data-v-15fab0cb>'1234567890123456789012345678901234567890'</span><span class="token punctuation" data-v-15fab0cb>;</span>
+
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token comment" data-v-15fab0cb>// Retrieve these values from the returnURL query string params</span>
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token variable" data-v-15fab0cb>$nonce</span> <span class="token operator" data-v-15fab0cb>=</span> <span class="token string single-quoted-string" data-v-15fab0cb>'REF1234'</span><span class="token punctuation" data-v-15fab0cb>;</span>
+<span class="token variable" data-v-15fab0cb>$reference</span> <span class="token operator" data-v-15fab0cb>=</span> <span class="token string single-quoted-string" data-v-15fab0cb>'FLY1234567890'</span><span class="token punctuation" data-v-15fab0cb>;</span>
+<span class="token variable" data-v-15fab0cb>$status</span> <span class="token operator" data-v-15fab0cb>=</span> <span class="token string single-quoted-string" data-v-15fab0cb>'success'</span><span class="token punctuation" data-v-15fab0cb>;</span>
+<span class="token variable" data-v-15fab0cb>$amount</span> <span class="token operator" data-v-15fab0cb>=</span> <span class="token string single-quoted-string" data-v-15fab0cb>'1234.56'</span><span class="token punctuation" data-v-15fab0cb>;</span>
+<span class="token variable" data-v-15fab0cb>$paymentMethod</span> <span class="token operator" data-v-15fab0cb>=</span> <span class="token string single-quoted-string" data-v-15fab0cb>'online'</span><span class="token punctuation" data-v-15fab0cb>;</span>
+<span class="token variable" data-v-15fab0cb>$sig</span> <span class="token operator" data-v-15fab0cb>=</span> <span class="token string single-quoted-string" data-v-15fab0cb>'631da0e951478c11bcb9831764de45c21a9c79d2a3b76361dd57a7127219ebcb'</span><span class="token punctuation" data-v-15fab0cb>;</span>
+
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token comment" data-v-15fab0cb>// Regenerate the signature locally</span>
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token variable" data-v-15fab0cb>$payload</span> <span class="token operator" data-v-15fab0cb>=</span> <span class="token variable" data-v-15fab0cb>$nonce</span> <span class="token operator" data-v-15fab0cb>.</span> <span class="token variable" data-v-15fab0cb>$sharedSecret</span> <span class="token operator" data-v-15fab0cb>.</span> <span class="token variable" data-v-15fab0cb>$reference</span> <span class="token operator" data-v-15fab0cb>.</span> <span class="token variable" data-v-15fab0cb>$status</span> <span class="token operator" data-v-15fab0cb>.</span> <span class="token variable" data-v-15fab0cb>$amount</span> <span class="token operator" data-v-15fab0cb>.</span> <span class="token variable" data-v-15fab0cb>$paymentMethod</span><span class="token punctuation" data-v-15fab0cb>;</span>
+<span class="token variable" data-v-15fab0cb>$compiledSignature</span> <span class="token operator" data-v-15fab0cb>=</span> <span class="token function" data-v-15fab0cb>hash</span><span class="token punctuation" data-v-15fab0cb>(</span><span class="token string single-quoted-string" data-v-15fab0cb>'sha256'</span><span class="token punctuation" data-v-15fab0cb>,</span> <span class="token variable" data-v-15fab0cb>$payload</span><span class="token punctuation" data-v-15fab0cb>)</span><span class="token punctuation" data-v-15fab0cb>;</span>
+
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token comment" data-v-15fab0cb>// Compare and continue</span>
+<span class="token comment" data-v-15fab0cb>//</span>
+<span class="token keyword" data-v-15fab0cb>if</span><span class="token punctuation" data-v-15fab0cb>(</span><span class="token variable" data-v-15fab0cb>$sig</span> <span class="token operator" data-v-15fab0cb>==</span> <span class="token variable" data-v-15fab0cb>$compiledSignature</span><span class="token punctuation" data-v-15fab0cb>)</span><span class="token punctuation" data-v-15fab0cb>{</span>
+  <span class="token keyword" data-v-15fab0cb>print</span> <span class="token string double-quoted-string" data-v-15fab0cb>"Match"</span><span class="token punctuation" data-v-15fab0cb>;</span>
+<span class="token punctuation" data-v-15fab0cb>}</span>
+<span class="token delimiter important" data-v-15fab0cb>?></span></span>
+</code></pre></div>
+  </div>
+</div>
+<h2 id="cookbook"><a href="#cookbook" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Cookbook</h2>
+<p>What follows is some suggested guidance on how to successfully implement the Flywire checkout. However, you should read the documentation fully
+and determine what is appropriate for your use case. If you need to discuss with Flywire please contact your account manager to arrange a call.
+This assumes you will be using version <code>"2"</code> of the webhook notifications.</p>
+<ol>
+<li>
+<p>Configure the checkout with the appropriate parameters ensuring you include values for the <code>nonce</code>, <code>callbackUrl</code> and <code>callbackId</code> and parameters.
+It often makes sense to use the same value for both the <code>nonce</code> and <code>callbackId</code>. Set the <code>callbackVersion</code>  to <code>"2"</code>.</p>
+</li>
+<li>
+<p>When a payer selects a payment option and continues to the payment page an <code>initiated</code> <a href="/en/webhooks/notifications-v2">notification</a> will be sent
+to your <code>callbackUrl</code>. This includes the payment method (bank_transfer, credit_card, online etc) and additional metadata (varies between methods).
+For bank transfers it may make sense for you to hold a booking or reserve product as the customer still needs to send Flywire the money to our bank account.
+We give customers a certain amount of time to do this as indicated by the expiry date in the notification message.</p>
+</li>
+<li>
+<p>When the payer completes the payment then <a href="/en/checkout/implementation#signature-verification">verify the signature</a> included in either the <code>returnUrl</code>
+query string or in the args supplied to the <code>onCompleteCallback</code> handler. <strong>Perform this verification on your server.</strong> Use this information
+to show the user the appropriate messaging - do not use it to release products or sevices to your customers.</p>
+</li>
+<li>
+<p>Use the status and payment method information returned in the webhook notifications sent to your <code>callbackUrl</code> to progress any orders, release
+services, complete bookings etc. This can either be done on <code>guaranteed</code> (Flywire has the funds) or <code>delivered</code> (Flywire has remitted the funds)
+to your registered bank account. A <code>cancelled</code> notification will be sent to you when the booking expires.</p>
+</li>
+</ol></div></article> <!----> <div class="grid grid-cols-2 gap-2 lg:px-8 pt-4 border-t dark:border-gray-800"><a href="/en" class="text-primary-500 font-bold hover:underline flex items-center justify-start nuxt-link-active"><svg fill="currentColor" viewBox="0 0 20 20" class="w-4 h-4 mr-1 flex-shrink-0"><path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg> <span class="truncate">Introduction</span></a> <a href="/en/dashboard" class="text-primary-500 font-bold hover:underline flex items-center justify-end"><span class="truncate">Dashboard</span> <svg fill="currentColor" viewBox="0 0 20 20" class="w-4 h-4 ml-1 flex-shrink-0"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a></div></div> <div class="w-full lg:w-1/4 block relative"><div class="lg:sticky lg:top-16 overflow-y-auto h-full lg:h-auto lg:max-h-(screen-16)"><nav class="py-4 lg:py-8 lg:pl-8 lg:pr-2"><p class="mb-3 lg:mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm lg:text-xs">On this page</p> <ul class="scrollactive-nav"><li class="text-gray-700 dark:text-gray-300 border-t border-dashed dark:border-gray-800 first:border-t-0"><a href="#overview" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 py-2">Overview</a></li><li class="text-gray-700 dark:text-gray-300 border-t border-dashed dark:border-gray-800 first:border-t-0"><a href="#sample-page" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 py-2">Sample Page</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#script" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Script</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#event-handler" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Event Handler</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#configuration" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Configuration</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#render" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Render</a></li><li class="text-gray-700 dark:text-gray-300 border-t border-dashed dark:border-gray-800 first:border-t-0"><a href="#sample-configurations" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 py-2">Sample Configurations</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#minimum" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Minimum</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#partial-payer-info" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Partial Payer Info</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#complete-payer-info" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Complete Payer Info</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#webhooks" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Webhooks</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#typical" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Typical</a></li><li class="text-gray-700 dark:text-gray-300 border-t border-dashed dark:border-gray-800 first:border-t-0"><a href="#configuration-parameters" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 py-2">Configuration Parameters</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#environment" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Environment</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#recipient-code" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Recipient Code</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#amount" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Amount</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#input-validation" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Input Validation</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#payer-info" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Payer Info</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#custom-info" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Custom Info</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#request-payer-info" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Request Payer Info</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#request-custom-info" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Request Custom Info</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#read-only" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Read Only</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#skip-steps" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Skip Steps</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#filtering" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Filtering</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#sorting" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Sorting</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#nonce" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Nonce</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#return-url" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Return URL</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#oncompletecallback" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">onCompleteCallback</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#oncancel" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">onCancel</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#modal-handle" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Modal Handle</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#extended-validation" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Extended Validation</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#split-payments" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Split Payments</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#locale" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Locale</a></li><li class="text-gray-700 dark:text-gray-300"><a href="#webhook-notifications" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 ml-2 pb-2">Webhook Notifications</a></li><li class="text-gray-700 dark:text-gray-300 border-t border-dashed dark:border-gray-800 first:border-t-0"><a href="#signature-verification" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 py-2">Signature Verification</a></li><li class="text-gray-700 dark:text-gray-300 border-t border-dashed dark:border-gray-800 first:border-t-0"><a href="#cookbook" class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1 py-2">Cookbook</a></li></ul></nav></div></div></div></div></main> <footer class="h-16 relative w-full border-t dark:border-gray-800 bg-white dark:bg-gray-900 z-20"><div class="h-full w-full container mx-auto px-4 lg:px-8 flex items-center justify-between"><div class="flex items-end"><a href="https://nuxtjs.org" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 140" class="h-4 light-img"><g fill="none" fill-rule="evenodd"><path d="M752.09356 137.76c-1.4858 1.49334-3.2966 2.24-5.43244 2.24-2.13584 0-3.94663-.74666-5.43243-2.24-1.4858-1.49334-2.22869-3.31332-2.22869-5.46V49.7c0-2.14668.74289-3.96666 2.22869-5.46 1.4858-1.49334 3.2966-2.24 5.43243-2.24 2.13584 0 3.96985.74666 5.50208 2.24 1.53223 1.49334 2.29834 3.31332 2.29834 5.46v33.6h36.07692V49.7c0-2.14668.7429-3.96666 2.2287-5.46 1.4858-1.49334 3.29659-2.24 5.43242-2.24 2.13584 0 3.96985.74666 5.50208 2.24C805.2339 45.73334 806 47.55332 806 49.7v82.6c0 2.14668-.7661 3.96666-2.29834 5.46-1.53223 1.49334-3.36624 2.24-5.50208 2.24-2.13583 0-3.94663-.74666-5.43243-2.24-1.4858-1.49334-2.22869-3.31332-2.22869-5.46V98.7h-36.07692v33.6c0 2.14668-.78932 3.96666-2.36798 5.46zM713.76536 44.24C715.25513 45.73334 716 47.55332 716 49.7s-.76815 3.99-2.30447 5.53-3.32867 2.31-5.3771 2.31h-22.2067v74.76c0 2.14668-.74487 3.96666-2.23463 5.46-1.48977 1.49334-3.3054 2.24-5.44693 2.24-2.14154 0-3.95716-.74666-5.44693-2.24-1.48977-1.49334-2.23464-3.31332-2.23464-5.46V57.54h-22.06704c-2.14153 0-3.95716-.77-5.44692-2.31C641.74487 53.69 641 51.84668 641 49.7c0-2.14668.74487-3.96666 2.23464-5.46 1.48976-1.49334 3.30539-2.24 5.44692-2.24h59.63688c2.14153 0 3.95716.74666 5.44692 2.24zM606 49.7c0-2.14668.76876-3.96666 2.3063-5.46 1.53755-1.49334 3.4114-2.24 5.62163-2.24 2.21022 0 4.1081.74666 5.6937 2.24C621.20721 45.73334 622 47.55332 622 49.7v82.6c0 2.14668-.79278 3.96666-2.37838 5.46s-3.48347 2.24-5.6937 2.24c-2.21021 0-4.08407-.74666-5.62161-2.24C606.76876 136.26666 606 134.44668 606 132.3V49.7zM492.36045 138.59978l-1.1209.84013h-.14011c-.28023 0-.70057.14002-1.26102.42007h-.42034c-.28023.09335-.72392.14002-1.33108.14002s-1.05084-.04667-1.33107-.14002h-.42034c-.56046-.1867-.88738-.30338-.9808-.35006-.0934-.04667-.25687-.11668-.49039-.21003-.23352-.09335-.5838-.32671-1.05085-.7001h-.1401c-.37365-.28005-.74728-.6301-1.12091-1.05017-.37364-.42007-.65386-.72344-.84068-.91014v-.14002c-.09341-.09335-.21017-.30338-.35028-.6301-.14012-.32672-.25688-.53675-.35029-.6301l-34.46782-81.63262c-.74727-1.96031-.72392-3.9206.07006-5.8809.79398-1.96032 2.17174-3.31385 4.13333-4.06063 1.86819-.84014 3.8064-.86348 5.8147-.07001 2.0083.79345 3.38606 2.17032 4.13333 4.13063l27.46217 64.83003 18.07459-42.98665c1.30773-3.17384 3.71298-4.76074 7.21582-4.76074 3.50285 0 5.9548 1.5869 7.35594 4.76074l18.07459 42.98665 27.32205-64.83003c.84068-1.9603 2.2418-3.33718 4.2034-4.13063 1.96159-.79347 3.92315-.79347 5.88474 0 1.9616.79345 3.33936 2.19366 4.13334 4.20064.79398 2.007.77063 3.94394-.07006 5.8109l-34.3277 81.63262c-.18682.74679-.70056 1.49356-1.54125 2.24035 0 .09335-.0467.23337-.14011.42006-.37364.1867-.70056.42007-.9808.70011h-.1401l-1.26102.84013h-.14012c-.0934 0-.18681.02334-.28022.07001-.09341.04668-.42034.16336-.9808.35006h-.28022c-.28023.09335-.72392.14002-1.33108.14002-.60715 0-1.05084-.04667-1.33107-.14002h-.42034c-.56045-.1867-.88738-.30338-.98079-.35006-.0934-.04667-.25687-.09334-.4904-.14002-.23352-.04667-.5838-.30337-1.05084-.77012h-.14012c-.84068-.56009-1.44783-1.21351-1.82147-1.9603-.37363-.1867-.65386-.65343-.84068-1.40022l-18.35481-43.4067-18.35482 43.4067c-.0934.28005-.28022.7001-.56045 1.2602l-.98079.98015c0 .09335-.0467.23337-.14011.42006-.18682.09335-.46704.32672-.84068.70011h-.28023z" fill="#00C48D" fill-rule="nonzero"></path> <path d="M383.76536 44.24C385.25513 45.73334 386 47.55332 386 49.7s-.76815 3.99-2.30447 5.53-3.32867 2.31-5.3771 2.31h-22.2067v74.76c0 2.14668-.74487 3.96666-2.23464 5.46-1.48976 1.49334-3.30539 2.24-5.44692 2.24-2.14154 0-3.95716-.74666-5.44693-2.24-1.48977-1.49334-2.23464-3.31332-2.23464-5.46V57.54h-22.06704c-2.14153 0-3.95716-.77-5.44692-2.31C311.74487 53.69 311 51.84668 311 49.7c0-2.14668.74487-3.96666 2.23464-5.46 1.48976-1.49334 3.30539-2.24 5.44692-2.24h59.63688c2.14153 0 3.95716.74666 5.44692 2.24zM247.67735 140c-2.14037 0-3.955-.74666-5.44394-2.24C240.74446 136.26666 240 134.44668 240 132.3V49.7c0-2.14668.74446-3.96666 2.23341-5.46s3.30357-2.24 5.44394-2.24c2.14036 0 3.97825.74666 5.51373 2.24 1.53547 1.49334 2.3032 3.31332 2.3032 5.46v74.76h37.82837c2.0473 0 3.83867.77 5.37415 2.31 1.53547 1.54 2.3032 3.35999 2.3032 5.46s-.76773 3.92-2.3032 5.46c-1.53548 1.54-3.32684 2.31-5.37415 2.31h-45.6453zM197 49.7c0-2.14668.76876-3.96666 2.3063-5.46 1.53755-1.49334 3.4114-2.24 5.62163-2.24 2.21022 0 4.1081.74666 5.6937 2.24C212.2072 45.73334 213 47.55332 213 49.7v82.6c0 2.14668-.79279 3.96666-2.37838 5.46-1.5856 1.49334-3.48347 2.24-5.6937 2.24-2.21021 0-4.08407-.74666-5.62161-2.24C197.76876 136.26666 197 134.44668 197 132.3V49.7zM164 98.54c0 11.10672-3.9472 20.62663-11.8417 28.56-7.8945 7.93337-17.44717 11.9-28.6583 11.9s-20.7638-3.9433-28.6583-11.83C86.9472 119.2833 83 109.74006 83 98.54V48.7c0-2.14668.7474-3.96666 2.24221-5.46 1.49482-1.49334 3.3166-2.24 5.4654-2.24 2.1488 0 3.99394.74666 5.53547 2.24 1.54153 1.49334 2.31228 3.31332 2.31228 5.46v49.84c0 6.81337 2.42905 12.66998 7.2872 17.57 4.85816 4.90002 10.74391 7.35 17.65744 7.35 6.91353 0 12.79928-2.42664 17.65744-7.28 4.85815-4.85336 7.2872-10.7333 7.2872-17.64V48.7c0-2.14668.77075-3.96666 2.31228-5.46 1.54153-1.49334 3.38667-2.24 5.53547-2.24s3.97058.74666 5.4654 2.24C163.2526 44.73334 164 46.55332 164 48.7v49.84zM8.26 140l-.14-.14c-.09333 0-.23333.04667-.42.14-2.14668 0-3.96666-.74666-5.46-2.24C.74666 136.26666 0 134.44668 0 132.3V49.7c0-2.14668.74666-3.96666 2.24-5.46C3.73334 42.74666 5.55332 42 7.7 42h19.88c7.37337 0 13.64997 2.58997 18.83 7.77 5.18003 5.18003 7.77 11.0833 7.77 17.71 0 6.6267-1.77332 12.31998-5.32 17.08 4.29335 2.70668 7.72332 6.29998 10.29 10.78 2.56668 4.48002 3.85 9.3333 3.85 14.56 0 8.3067-2.91664 15.39997-8.75 21.28-5.83336 5.88003-12.9033 8.82-21.21 8.82H8.26zm7.28-82.46v22.4h12.04c3.08002 0 5.69332-1.11999 7.84-3.36s3.22-4.89998 3.22-7.98-1.07332-5.69332-3.22-7.84-4.75998-3.22-7.84-3.22H15.54zm0 37.94v28.98h17.5c4.01335-.09333 7.41999-1.53999 10.22-4.34 2.80001-2.80001 4.2-6.20665 4.2-10.22 0-4.01335-1.39999-7.39665-4.2-10.15-2.80001-2.75335-6.20665-4.17667-10.22-4.27h-17.5z" fill="#2F495E" fill-rule="nonzero"></path> <g fill-rule="nonzero" transform="translate(865)"><path d="M105.41346 38.55829l-6.33111 11.13597-21.65186-38.0943-66.46753 116.92767h45.00297c0 6.15023 4.90828 11.13597 10.96296 11.13597H10.96296c-3.91631 0-7.5348-2.12357-9.49262-5.5689-1.95783-3.44535-1.95763-7.6899.00052-11.13505L67.9384 6.03198c1.9583-3.44565 5.57756-5.5683 9.49438-5.5683 3.91681 0 7.53608 2.12265 9.49438 5.5683l18.4863 32.52631z" fill="#00C58E"></path> <path d="M153.3947 122.95965l-41.65013-73.2654-6.33111-11.13596-6.33111 11.13597-41.64556 73.26539c-1.95816 3.44515-1.95836 7.6897-.00053 11.13504 1.95783 3.44534 5.57632 5.56891 9.49263 5.56891h76.96c3.91713 0 7.5371-2.12126 9.49605-5.5669 1.95895-3.44564 1.95918-7.69118.00062-11.13705h.00913zm-86.46581 5.56798l38.48457-67.6974 38.47543 67.6974h-76.96z" fill="#2F495E"></path> <path d="M183.17284 134.09562c-1.95797 3.44482-5.57616 5.56798-9.4921 5.56798H143.8889c6.05468 0 10.96296-4.98574 10.96296-11.13597h18.80605l-53.36222-93.88085-8.55111 15.04748-6.33111-11.13597 5.39012-9.4795c1.9583-3.44565 5.57757-5.5683 9.49438-5.5683 3.91682 0 7.53609 2.12265 9.49439 5.5683l53.38049 93.88086c1.95834 3.44548 1.95834 7.69049 0 11.13597z" fill="#108775"></path></g></g></svg> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 140" class="h-4 dark-img"><g fill="none" fill-rule="evenodd"><path d="M752.09356 137.76c-1.4858 1.49334-3.2966 2.24-5.43244 2.24-2.13584 0-3.94663-.74666-5.43243-2.24-1.4858-1.49334-2.22869-3.31332-2.22869-5.46V49.7c0-2.14668.74289-3.96666 2.22869-5.46 1.4858-1.49334 3.2966-2.24 5.43243-2.24 2.13584 0 3.96985.74666 5.50208 2.24 1.53223 1.49334 2.29834 3.31332 2.29834 5.46v33.6h36.07692V49.7c0-2.14668.7429-3.96666 2.2287-5.46 1.4858-1.49334 3.29659-2.24 5.43242-2.24 2.13584 0 3.96985.74666 5.50208 2.24C805.2339 45.73334 806 47.55332 806 49.7v82.6c0 2.14668-.7661 3.96666-2.29834 5.46-1.53223 1.49334-3.36624 2.24-5.50208 2.24-2.13583 0-3.94663-.74666-5.43243-2.24-1.4858-1.49334-2.22869-3.31332-2.22869-5.46V98.7h-36.07692v33.6c0 2.14668-.78932 3.96666-2.36798 5.46zM713.76536 44.24C715.25513 45.73334 716 47.55332 716 49.7s-.76815 3.99-2.30447 5.53-3.32867 2.31-5.3771 2.31h-22.2067v74.76c0 2.14668-.74487 3.96666-2.23463 5.46-1.48977 1.49334-3.3054 2.24-5.44693 2.24-2.14154 0-3.95716-.74666-5.44693-2.24-1.48977-1.49334-2.23464-3.31332-2.23464-5.46V57.54h-22.06704c-2.14153 0-3.95716-.77-5.44692-2.31C641.74487 53.69 641 51.84668 641 49.7c0-2.14668.74487-3.96666 2.23464-5.46 1.48976-1.49334 3.30539-2.24 5.44692-2.24h59.63688c2.14153 0 3.95716.74666 5.44692 2.24zM606 49.7c0-2.14668.76876-3.96666 2.3063-5.46 1.53755-1.49334 3.4114-2.24 5.62163-2.24 2.21022 0 4.1081.74666 5.6937 2.24C621.20721 45.73334 622 47.55332 622 49.7v82.6c0 2.14668-.79278 3.96666-2.37838 5.46s-3.48347 2.24-5.6937 2.24c-2.21021 0-4.08407-.74666-5.62161-2.24C606.76876 136.26666 606 134.44668 606 132.3V49.7zM492.36045 138.59978l-1.1209.84013h-.14011c-.28023 0-.70057.14002-1.26102.42007h-.42034c-.28023.09335-.72392.14002-1.33108.14002s-1.05084-.04667-1.33107-.14002h-.42034c-.56046-.1867-.88738-.30338-.9808-.35006-.0934-.04667-.25687-.11668-.49039-.21003-.23352-.09335-.5838-.32671-1.05085-.7001h-.1401c-.37365-.28005-.74728-.6301-1.12091-1.05017-.37364-.42007-.65386-.72344-.84068-.91014v-.14002c-.09341-.09335-.21017-.30338-.35028-.6301-.14012-.32672-.25688-.53675-.35029-.6301l-34.46782-81.63262c-.74727-1.96031-.72392-3.9206.07006-5.8809.79398-1.96032 2.17174-3.31385 4.13333-4.06063 1.86819-.84014 3.8064-.86348 5.8147-.07001 2.0083.79345 3.38606 2.17032 4.13333 4.13063l27.46217 64.83003 18.07459-42.98665c1.30773-3.17384 3.71298-4.76074 7.21582-4.76074 3.50285 0 5.9548 1.5869 7.35594 4.76074l18.07459 42.98665 27.32205-64.83003c.84068-1.9603 2.2418-3.33718 4.2034-4.13063 1.96159-.79347 3.92315-.79347 5.88474 0 1.9616.79345 3.33936 2.19366 4.13334 4.20064.79398 2.007.77063 3.94394-.07006 5.8109l-34.3277 81.63262c-.18682.74679-.70056 1.49356-1.54125 2.24035 0 .09335-.0467.23337-.14011.42006-.37364.1867-.70056.42007-.9808.70011h-.1401l-1.26102.84013h-.14012c-.0934 0-.18681.02334-.28022.07001-.09341.04668-.42034.16336-.9808.35006h-.28022c-.28023.09335-.72392.14002-1.33108.14002-.60715 0-1.05084-.04667-1.33107-.14002h-.42034c-.56045-.1867-.88738-.30338-.98079-.35006-.0934-.04667-.25687-.09334-.4904-.14002-.23352-.04667-.5838-.30337-1.05084-.77012h-.14012c-.84068-.56009-1.44783-1.21351-1.82147-1.9603-.37363-.1867-.65386-.65343-.84068-1.40022l-18.35481-43.4067-18.35482 43.4067c-.0934.28005-.28022.7001-.56045 1.2602l-.98079.98015c0 .09335-.0467.23337-.14011.42006-.18682.09335-.46704.32672-.84068.70011h-.28023z" fill="#00C48D" fill-rule="nonzero"></path> <path d="M383.76536 44.24C385.25513 45.73334 386 47.55332 386 49.7s-.76815 3.99-2.30447 5.53-3.32867 2.31-5.3771 2.31h-22.2067v74.76c0 2.14668-.74487 3.96666-2.23464 5.46-1.48976 1.49334-3.30539 2.24-5.44692 2.24-2.14154 0-3.95716-.74666-5.44693-2.24-1.48977-1.49334-2.23464-3.31332-2.23464-5.46V57.54h-22.06704c-2.14153 0-3.95716-.77-5.44692-2.31C311.74487 53.69 311 51.84668 311 49.7c0-2.14668.74487-3.96666 2.23464-5.46 1.48976-1.49334 3.30539-2.24 5.44692-2.24h59.63688c2.14153 0 3.95716.74666 5.44692 2.24zM247.67735 140c-2.14037 0-3.955-.74666-5.44394-2.24C240.74446 136.26666 240 134.44668 240 132.3V49.7c0-2.14668.74446-3.96666 2.23341-5.46s3.30357-2.24 5.44394-2.24c2.14036 0 3.97825.74666 5.51373 2.24 1.53547 1.49334 2.3032 3.31332 2.3032 5.46v74.76h37.82837c2.0473 0 3.83867.77 5.37415 2.31 1.53547 1.54 2.3032 3.35999 2.3032 5.46s-.76773 3.92-2.3032 5.46c-1.53548 1.54-3.32684 2.31-5.37415 2.31h-45.6453zM197 49.7c0-2.14668.76876-3.96666 2.3063-5.46 1.53755-1.49334 3.4114-2.24 5.62163-2.24 2.21022 0 4.1081.74666 5.6937 2.24C212.2072 45.73334 213 47.55332 213 49.7v82.6c0 2.14668-.79279 3.96666-2.37838 5.46-1.5856 1.49334-3.48347 2.24-5.6937 2.24-2.21021 0-4.08407-.74666-5.62161-2.24C197.76876 136.26666 197 134.44668 197 132.3V49.7zM164 98.54c0 11.10672-3.9472 20.62663-11.8417 28.56-7.8945 7.93337-17.44717 11.9-28.6583 11.9s-20.7638-3.9433-28.6583-11.83C86.9472 119.2833 83 109.74006 83 98.54V48.7c0-2.14668.7474-3.96666 2.24221-5.46 1.49482-1.49334 3.3166-2.24 5.4654-2.24 2.1488 0 3.99394.74666 5.53547 2.24 1.54153 1.49334 2.31228 3.31332 2.31228 5.46v49.84c0 6.81337 2.42905 12.66998 7.2872 17.57 4.85816 4.90002 10.74391 7.35 17.65744 7.35 6.91353 0 12.79928-2.42664 17.65744-7.28 4.85815-4.85336 7.2872-10.7333 7.2872-17.64V48.7c0-2.14668.77075-3.96666 2.31228-5.46 1.54153-1.49334 3.38667-2.24 5.53547-2.24s3.97058.74666 5.4654 2.24C163.2526 44.73334 164 46.55332 164 48.7v49.84zM8.26 140l-.14-.14c-.09333 0-.23333.04667-.42.14-2.14668 0-3.96666-.74666-5.46-2.24C.74666 136.26666 0 134.44668 0 132.3V49.7c0-2.14668.74666-3.96666 2.24-5.46C3.73334 42.74666 5.55332 42 7.7 42h19.88c7.37337 0 13.64997 2.58997 18.83 7.77 5.18003 5.18003 7.77 11.0833 7.77 17.71 0 6.6267-1.77332 12.31998-5.32 17.08 4.29335 2.70668 7.72332 6.29998 10.29 10.78 2.56668 4.48002 3.85 9.3333 3.85 14.56 0 8.3067-2.91664 15.39997-8.75 21.28-5.83336 5.88003-12.9033 8.82-21.21 8.82H8.26zm7.28-82.46v22.4h12.04c3.08002 0 5.69332-1.11999 7.84-3.36s3.22-4.89998 3.22-7.98-1.07332-5.69332-3.22-7.84-4.75998-3.22-7.84-3.22H15.54zm0 37.94v28.98h17.5c4.01335-.09333 7.41999-1.53999 10.22-4.34 2.80001-2.80001 4.2-6.20665 4.2-10.22 0-4.01335-1.39999-7.39665-4.2-10.15-2.80001-2.75335-6.20665-4.17667-10.22-4.27h-17.5z" fill="#FFF" fill-rule="nonzero"></path> <g fill-rule="nonzero" transform="translate(865)"><path d="M105.41346 38.55829l-6.33111 11.13597-21.65186-38.0943-66.46753 116.92767h45.00297c0 6.15023 4.90828 11.13597 10.96296 11.13597H10.96296c-3.91631 0-7.5348-2.12357-9.49262-5.5689-1.95783-3.44535-1.95763-7.6899.00052-11.13505L67.9384 6.03198c1.9583-3.44565 5.57756-5.5683 9.49438-5.5683 3.91681 0 7.53608 2.12265 9.49438 5.5683l18.4863 32.52631z" fill="#00C58E"></path> <path d="M153.3947 122.95965l-41.65013-73.2654-6.33111-11.13596-6.33111 11.13597-41.64556 73.26539c-1.95816 3.44515-1.95836 7.6897-.00053 11.13504 1.95783 3.44534 5.57632 5.56891 9.49263 5.56891h76.96c3.91713 0 7.5371-2.12126 9.49605-5.5669 1.95895-3.44564 1.95918-7.69118.00062-11.13705h.00913zm-86.46581 5.56798l38.48457-67.6974 38.47543 67.6974h-76.96z" fill="#FFF"></path> <path d="M183.17284 134.09562c-1.95797 3.44482-5.57616 5.56798-9.4921 5.56798H143.8889c6.05468 0 10.96296-4.98574 10.96296-11.13597h18.80605l-53.36222-93.88085-8.55111 15.04748-6.33111-11.13597 5.39012-9.4795c1.9583-3.44565 5.57757-5.5683 9.49438-5.5683 3.91682 0 7.53609 2.12265 9.49439 5.5683l53.38049 93.88086c1.95834 3.44548 1.95834 7.69049 0 11.13597z" fill="#108775"></path></g></g></svg></a></div> <div class="flex items-center space-x-4"><!----> <span class="inline-flex"><button aria-label="Color Mode" class="rounded-md hover:text-primary-500 focus:outline-none transition ease-in-out duration-150"><!----></button></span></div></div></footer></div></div></div><script defer src="/_nuxt/static/1634816039/en/checkout/implementation/state.js"></script><script src="/_nuxt/455e051.js" defer></script><script src="/_nuxt/49e3250.js" defer></script><script src="/_nuxt/fd66c9d.js" defer></script><script src="/_nuxt/7fb4722.js" defer></script><script src="/_nuxt/06b1be8.js" defer></script><script src="/_nuxt/c427fc1.js" defer></script><script src="/_nuxt/6f197ac.js" defer></script><script src="/_nuxt/d84b617.js" defer></script><script src="/_nuxt/b53228f.js" defer></script><script src="/_nuxt/698c9d9.js" defer></script><script src="/_nuxt/1cd8660.js" defer></script>
+  </body>
+</html>
